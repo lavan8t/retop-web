@@ -1,26 +1,208 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Google Sans Flex";
+  font-weight: 1 1000;
+  font-stretch: 25% 151%;
+  font-display: swap;
+  src: url("/fonts/gsf.subset.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Google Sans Flex";
+  font-weight: 1 1000;
+  font-stretch: 25% 151%;
+  font-display: swap;
+  src: url("/fonts/gsf.subset2.woff2") format("woff2");
+  unicode-range:
+    U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4,
+    U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3,
+    U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF,
+    U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF,
+    U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0,
+    U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F,
+    U+1F000-1F0FF, U+1F100-1F1AD;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-google-sans-flex: "Google Sans Flex", system-ui, sans-serif;
+    /* ── Accent (overridden by JS via applyMaterialTheme) ── */
+    --accent: var(--md-sys-color-primary, #d95a00); 
+    --accent-dim: var(--md-sys-color-primary-container, #ff8a00);
+    --on-accent: var(--md-sys-color-on-primary, #ffffff);
+
+    /* ── Gradient ── */
+    --retop-gradient-start: var(--accent-dim);
+    --retop-gradient-mid: var(--accent-dim);
+    --retop-gradient-end: var(--accent);
+    --retop-dark-orange-rgb: 217, 90, 0; /* fallback for scrim */
+
+    --retop-gradient: linear-gradient(
+      180deg,
+      var(--retop-gradient-start) 0%,
+      var(--retop-gradient-start) 40%,
+      var(--retop-gradient-end) 100%
+    );
+  }
+
+  /* ── DARK (default) ── */
+  :root,
+  [data-theme="dark"] {
+    --text-main: #ffffff;
+    --text-muted: #a3a3a3;
+    --bg-surface: #0a0a0a;
+    --bg-card: #0f0f0f;
+    --bg-elevated: #141414;
+    --border-main: var(--accent);
+    --border-subtle: #1a1a1a;
+    --shadow-color: var(--accent);
+    --shadow-main: var(--shadow-color);
+    
+    /* Make background gradient significantly darker in dark mode */
+    --retop-gradient-start: color-mix(in srgb, var(--accent-dim) 15%, var(--bg-surface));
+    --retop-gradient-end: color-mix(in srgb, var(--accent) 30%, var(--bg-surface));
+  }
+
+  /* ── AMOLED ── */
+  [data-theme="amoled"] {
+    --text-main: #ffffff;
+    --text-muted: #a3a3a3;
+    --bg-surface: #000000;
+    --bg-card: #000000;
+    --bg-elevated: #000000;
+    --border-main: var(--accent);
+    --border-subtle: #1a1a1a;
+    --shadow-color: var(--accent);
+    --shadow-main: var(--shadow-color);
+    --retop-gradient-start: #000000;
+    --retop-gradient-mid: #000000;
+    --retop-gradient-end: #000000;
+  }
+
+  /* ── LIGHT ── */
+  [data-theme="light"] {
+    --text-main: #000000;
+    --text-muted: #5a5a5a;
+    --bg-surface: #ffffff;
+    --bg-card: #f5f5f5;
+    --bg-elevated: #e5e5e5;
+    --border-main: var(--accent);
+    --border-subtle: #d4d4d4;
+    --shadow-color: var(--accent);
+    --shadow-main: var(--shadow-color);
+    
+    /* Make background gradient dark top, light bottom */
+    --retop-gradient-start: color-mix(in srgb, var(--accent) 30%, var(--bg-surface));
+    --retop-gradient-end: color-mix(in srgb, var(--accent-dim) 15%, var(--bg-surface));
+  }
+
+  /* Smooth transitions for theme changes */
+  *,
+  *::before,
+  *::after {
+    transition-property: background-color, border-color, color, box-shadow, opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-google-sans-flex), sans-serif;
+  font-variation-settings: "ROND" 100;
+  background-color: transparent; /* Transparent so the fixed gradient shows */
+  color: var(--text-main);
 }
+
+code,
+pre,
+kbd,
+samp {
+  font-family: inherit !important;
+}
+
+@layer utilities {
+  /* Eased Scrim Gradient for Navbar */
+  .nav-gradient {
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--retop-gradient-start) 100%, transparent) 0%,
+      color-mix(in srgb, var(--retop-gradient-start) 99%, transparent) 6.25%,
+      color-mix(in srgb, var(--retop-gradient-start) 96%, transparent) 12.5%,
+      color-mix(in srgb, var(--retop-gradient-start) 91%, transparent) 18.75%,
+      color-mix(in srgb, var(--retop-gradient-start) 85%, transparent) 25%,
+      color-mix(in srgb, var(--retop-gradient-start) 78%, transparent) 31.25%,
+      color-mix(in srgb, var(--retop-gradient-start) 69%, transparent) 37.5%,
+      color-mix(in srgb, var(--retop-gradient-start) 60%, transparent) 43.75%,
+      color-mix(in srgb, var(--retop-gradient-start) 50%, transparent) 50%,
+      color-mix(in srgb, var(--retop-gradient-start) 40%, transparent) 56.25%,
+      color-mix(in srgb, var(--retop-gradient-start) 31%, transparent) 62.5%,
+      color-mix(in srgb, var(--retop-gradient-start) 22%, transparent) 68.75%,
+      color-mix(in srgb, var(--retop-gradient-start) 15%, transparent) 75%,
+      color-mix(in srgb, var(--retop-gradient-start) 8%, transparent) 81.25%,
+      color-mix(in srgb, var(--retop-gradient-start) 4%, transparent) 87.5%,
+      color-mix(in srgb, var(--retop-gradient-start) 1%, transparent) 93.75%,
+      transparent 100%
+    );
+  }
+
+  .font-hero-base {
+    font-variation-settings:
+      "wdth" 151,
+      "wght" 800,
+      "GRAD" 100,
+      "ROND" 100,
+      "slnt" -10;
+    transition:
+      font-variation-settings 0.35s cubic-bezier(0.19, 1, 0.22, 1),
+      color 0.2s ease !important;
+  }
+  .group:hover .font-hero-base {
+    font-variation-settings:
+      "wdth" 151,
+      "wght" 10,
+      "GRAD" 100,
+      "ROND" 100,
+      "slnt" -10 !important;
+  }
+
+  .font-title-base {
+    font-variation-settings:
+      "wdth" 125,
+      "wght" 500,
+      "GRAD" 100,
+      "ROND" 100,
+      "slnt" 0 !important;
+    transition: font-variation-settings 0.3s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  }
+  .group:hover .font-title-base {
+    font-variation-settings:
+      "wdth" 120,
+      "wght" 400,
+      "GRAD" 0,
+      "ROND" 100,
+      "slnt" -8 !important;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--on-accent);
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
