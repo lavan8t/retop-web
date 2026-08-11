@@ -1,0 +1,26 @@
+{
+  "hosting": {
+    "public": "out",
+    "cleanUrls": true,
+    "trailingSlash": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/u/*/home",
+        "destination": "/offline-shell.html"
+      },
+      {
+        "source": "/u/*/home/**",
+        "destination": "/offline-shell.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

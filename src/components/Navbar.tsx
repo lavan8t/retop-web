@@ -83,30 +83,20 @@ export default function Navbar({
             <span style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>Go to retop</span>
           </a>
         ) : (
-          <>
-            <a
-              href="/u/0/home"
-              className="flex items-center gap-2 text-(--text-muted) hover:text-(--text-main) px-4 py-2 rounded-full font-bold text-sm transition-colors duration-150 ease-out"
-            >
-              <CloudOff className="text-current w-4 h-4" />
-              <span className="tracking-tight mt-0.5">Open Offline</span>
-            </a>
-
-            <a
-              href={isSupported ? chromeStoreUrl : "#"}
-              target={isSupported ? "_blank" : "_self"}
-              rel="noreferrer"
-              id="nav-cta"
-              className={`flex items-center gap-2 bg-(--accent) text-(--on-accent) px-5 py-2 rounded-full font-bold text-sm hover:opacity-90 transition-all duration-150 ease-out group ${
-                !isSupported ? "opacity-50 pointer-events-none grayscale" : ""
-              }`}
-            >
-              <Extension className="text-current w-4 h-4" />
-              <span className="text-sm tracking-tight mt-0.5">
-                {isSupported ? `Add to ${browserName}` : "Not supported"}
-              </span>
-            </a>
-          </>
+          <a
+            href={isSupported ? chromeStoreUrl : "#"}
+            target={isSupported ? "_blank" : "_self"}
+            rel="noreferrer"
+            id="nav-cta"
+            className={`flex items-center gap-2 bg-(--accent) text-(--on-accent) px-5 py-2 rounded-full font-bold text-sm hover:opacity-90 transition-all duration-150 ease-out group ${
+              !isSupported ? "opacity-50 pointer-events-none grayscale" : ""
+            }`}
+          >
+            <Extension className="text-current w-4 h-4" />
+            <span className="text-sm tracking-tight mt-0.5">
+              {isSupported ? "Install retop" : "Not supported"}
+            </span>
+          </a>
         )}
       </div>
     </nav>

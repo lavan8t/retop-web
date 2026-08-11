@@ -57,6 +57,11 @@ export default function RootLayout({
           media="(prefers-color-scheme: dark)"
         />
         <script
+          dangerouslySetInnerHTML={{
+            __html: `if(typeof window!=="undefined"){window.litIssuedWarnings=new Set(["dev-mode"]);}`,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />

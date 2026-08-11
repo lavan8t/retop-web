@@ -155,29 +155,20 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
                 <span className="text-base md:text-lg" style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>Go to retop</span>
               </a>
             ) : (
-              <>
-                <a
-                  href={isSupported ? chromeStoreUrl : "#"}
-                  target={isSupported ? "_blank" : "_self"}
-                  rel="noopener noreferrer"
-                  id="hero-cta"
-                  className={`flex items-center justify-center gap-3 bg-(--accent) text-(--on-accent) px-8 py-3.5 rounded-full font-bold text-base md:text-lg hover:opacity-90 transition-all duration-150 ease-out ${
-                    !isSupported ? "opacity-50 pointer-events-none grayscale" : ""
-                  }`}
-                >
-                  <Extension className="text-current text-2xl" />
-                  <span className="tracking-tighter mt-0.5">
-                    {isSupported ? `Add to ${browserName}` : "Browser not supported"}
-                  </span>
-                </a>
-                <a
-                  href="/u/0/home"
-                  className="flex items-center justify-center gap-3 bg-(--bg-surface)/60 text-(--text-main) border border-(--border-subtle) px-8 py-3.5 rounded-full font-bold text-base md:text-lg hover:bg-(--bg-surface) transition-all duration-150 ease-out"
-                >
-                  <CloudOff className="text-(--accent) text-2xl" />
-                  <span className="tracking-tighter mt-0.5">Open Offline App</span>
-                </a>
-              </>
+              <a
+                href={isSupported ? chromeStoreUrl : "#"}
+                target={isSupported ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                id="hero-cta"
+                className={`flex items-center justify-center gap-3 bg-(--accent) text-(--on-accent) px-8 py-3.5 rounded-full font-bold text-base md:text-lg hover:opacity-90 transition-all duration-150 ease-out ${
+                  !isSupported ? "opacity-50 pointer-events-none grayscale" : ""
+                }`}
+              >
+                <Extension className="text-current text-2xl" />
+                <span className="tracking-tighter mt-0.5">
+                  {isSupported ? "Install retop" : "Browser not supported"}
+                </span>
+              </a>
             )}
           </div>
         </div>

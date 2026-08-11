@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npx rimraf out/offline.html",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
