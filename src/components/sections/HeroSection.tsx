@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { DashboardMockup } from "@/components/DashboardMockup";
 import { Extension, CloudOff, ArrowForward } from "@nine-thirty-five/material-symbols-react/rounded/700/filled";
 import { useBrowserDetection } from "@/hooks/useBrowserDetection";
+import { useExtensionDetection } from "@/hooks/useExtensionDetection";
 
 gsap.registerPlugin(useGSAP);
 
@@ -24,22 +25,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
   const mockupRef = useRef<HTMLDivElement>(null);
 
   const { browserName, isSupported } = useBrowserDetection();
-  const [isExtInstalled, setIsExtInstalled] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("__RETOP_EXT_PRESENT__") === "true") {
-        setIsExtInstalled(true);
-      }
-      const onMsg = (e: MessageEvent) => {
-        if (e.data?.type === "RETOP_EXT_PRESENT") {
-          setIsExtInstalled(true);
-        }
-      };
-      window.addEventListener("message", onMsg);
-      return () => window.removeEventListener("message", onMsg);
-    }
-  }, []);
+  const isExtInstalled = useExtensionDetection();
 
   useGSAP(
     () => {

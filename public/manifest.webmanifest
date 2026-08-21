@@ -2,7 +2,7 @@
   "name": "retop - VTOP Reimagined",
   "short_name": "retop",
   "description": "Modern, ultra-fast, offline-capable interface for VTOP",
-  "start_url": "./offline.html",
+  "start_url": "/u/0/home",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
