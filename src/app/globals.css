@@ -28,6 +28,38 @@
     U+1F000-1F0FF, U+1F100-1F1AD;
 }
 
+@font-face {
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/times_new_roman_bold_italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Times New Roman";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/times_new_roman_bold_italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/arial_bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/arial_bold.ttf") format("truetype");
+}
+
 @layer base {
   :root {
     --font-google-sans-flex: "Google Sans Flex", system-ui, sans-serif;
@@ -133,6 +165,14 @@ textarea {
 }
 
 @layer utilities {
+  .font-id-times {
+    font-family: "Times New Roman", Times, serif !important;
+  }
+
+  .font-id-helvetica {
+    font-family: "Helvetica", Arial, sans-serif !important;
+  }
+
   /* Eased Scrim Gradient for Navbar */
   .nav-gradient {
     background: linear-gradient(

@@ -15,13 +15,15 @@ function AuthenticDigitalIDCard() {
       {/* Top Header */}
       <div className="pt-2.5 sm:pt-3 text-center shrink-0">
         <div
-          className="text-3xl sm:text-4xl font-bold text-black tracking-normal leading-none"
+          className="text-3xl sm:text-4xl font-bold text-black tracking-normal leading-none font-id-times"
+          style={{ fontFamily: "'Times New Roman', Times, serif" }}
         >
           VTOP
         </div>
         <div className="mt-1 sm:mt-1.5 flex justify-center">
           <span
-            className="text-[11px] sm:text-xs font-black text-black tracking-widest uppercase scale-x-110 sm:scale-x-120 inline-block transform"
+            className="text-[11px] sm:text-xs font-black text-black tracking-widest uppercase scale-x-110 sm:scale-x-120 inline-block transform font-id-times"
+            style={{ fontFamily: "'Times New Roman', Times, serif" }}
           >
             CHENNAI CAMPUS
           </span>
@@ -39,16 +41,25 @@ function AuthenticDigitalIDCard() {
 
       {/* Student Name & Reg No */}
       <div className="flex flex-col items-center justify-center text-center px-2 mt-auto mb-2">
-        <span className="font-sans font-bold text-base sm:text-lg text-[#181d79] tracking-wide uppercase leading-tight">
+        <span
+          className="font-bold text-base sm:text-lg text-[#181d79] tracking-wide uppercase leading-tight font-id-helvetica"
+          style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
+        >
           JOHN DOE
         </span>
-        <span className="font-sans font-bold text-xs sm:text-sm text-black tracking-normal mt-0.5">
+        <span
+          className="font-bold text-xs sm:text-sm text-black tracking-normal mt-0.5 font-id-helvetica"
+          style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
+        >
           21BCE0001
         </span>
       </div>
 
       {/* Bottom Hosteller Banner */}
-      <div className="w-full bg-[#181d79] text-white font-sans font-bold text-center py-2 sm:py-2.5 rounded-b-xl text-xs sm:text-sm uppercase tracking-wider shrink-0">
+      <div
+        className="w-full bg-[#181d79] text-white font-bold text-center py-2 sm:py-2.5 rounded-b-xl text-xs sm:text-sm uppercase tracking-wider shrink-0 font-id-helvetica"
+        style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
+      >
         HOSTELLER
       </div>
     </div>
