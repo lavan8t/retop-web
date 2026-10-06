@@ -43,15 +43,15 @@ const results = [
 export default function OmniboxSection() {
   return (
     <section
-      className="relative w-full max-w-6xl px-6 md:px-12 py-32 z-20"
+      className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 z-20"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
         {/* Text */}
         <div className="omnibox-heading flex flex-col gap-6">
-          <h2 className="font-title-base text-[clamp(2rem,4.5vw,3.5rem)] text-(--text-main) leading-none tracking-tighter">
+          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none tracking-tighter">
             Press any key. Jump anywhere.
           </h2>
-          <p className="text-(--text-muted) text-base leading-relaxed font-medium max-w-md">
+          <p className="text-(--text-muted) text-base sm:text-lg leading-relaxed font-medium max-w-md">
             Press{" "}
             <kbd className="bg-(--bg-surface) border-2 border-(--accent) text-(--accent) px-2 py-0.5 rounded text-xs font-black">
               Spacebar
@@ -83,7 +83,7 @@ export default function OmniboxSection() {
         </div>
 
         {/* Omnibox preview */}
-        <div className="omnibox-preview bg-(--bg-surface) border-[3px] border-(--bg-surface) rounded-2xl p-6 flex flex-col gap-4">
+        <div className="omnibox-preview bg-(--bg-surface) border-[3px] border-(--bg-surface) rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
           {/* Search input */}
           <div className="flex items-center gap-3 bg-(--bg-card) border-2 border-(--accent)/40 rounded-xl px-4 py-3">
             <Search className="text-(--text-muted) w-5 h-5" />
@@ -101,7 +101,7 @@ export default function OmniboxSection() {
                 className={`result-row flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-100 ${
                   i === 0
                     ? "bg-(--accent)/20 border-2 border-(--accent)/50"
-                    : "border-2 border-transparent hover:bg-(--bg-surface)"
+                    : "border-2 border-transparent"
                 }`}
               >
                 <span className="text-(--accent) text-base w-5 text-center shrink-0">

@@ -6,13 +6,13 @@ import { CloudOff } from "@nine-thirty-five/material-symbols-react/rounded/700/f
 export default function OfflineSection() {
   return (
     <section
-      className="relative w-full max-w-6xl px-6 md:px-12 py-32 z-20"
+      className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 z-20"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
         {/* Text */}
         <div className="offline-text flex flex-col gap-6">
           <CloudOff className="text-(--accent) text-5xl drop-shadow-md" />
-          <h2 className="font-title-base text-[clamp(2rem,4.5vw,3.5rem)] text-(--text-main) leading-none tracking-tighter">
+          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none tracking-tighter">
             Even when WiFi gives up, retop doesn&apos;t.
           </h2>
           <div className="flex flex-col gap-6 mt-2 pr-4">

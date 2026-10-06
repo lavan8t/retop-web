@@ -32,12 +32,12 @@ export default function Navbar({
   return (
     <nav
       ref={navRef}
-      className={`nav-gradient fixed top-0 left-0 w-full z-50 px-6 md:px-12 pt-6 pb-12 flex justify-between items-center pointer-events-none`}
+      className={`nav-gradient fixed top-0 left-0 w-full z-50 px-4 sm:px-6 md:px-12 pt-4 sm:pt-6 pb-8 sm:pb-12 flex justify-between items-center pointer-events-none`}
     >
       {/* Logo */}
       <Link
         href="/"
-        className="group flex items-center text-3xl text-(--text-main) pointer-events-auto lowercase select-none cursor-pointer"
+        className="group flex items-center text-2xl sm:text-3xl text-(--text-main) pointer-events-auto lowercase select-none cursor-pointer shrink-0"
         style={{
           fontVariationSettings:
             '"wdth" 125, "wght" 800, "GRAD" 100, "ROND" 100, "slnt" -10',
@@ -50,21 +50,21 @@ export default function Navbar({
       </Link>
 
       {/* Links + CTA */}
-      <div className="flex items-center gap-4 md:gap-6 pointer-events-auto">
+      <div className="flex items-center gap-2.5 sm:gap-4 md:gap-6 pointer-events-auto shrink-0">
         <a
           href="https://github.com"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-1 text-(--text-main) hover:text-(--accent) font-bold text-sm transition-colors duration-150 ease-out group"
+          className="flex items-center gap-1 text-(--text-main) hover:text-(--accent) font-bold text-xs sm:text-sm transition-colors duration-150 ease-out group"
         >
           <span>GitHub</span>
-          <ArrowOutward className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-150" />
+          <ArrowOutward className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-150" />
         </a>
 
         {isExtInstalled ? (
           <a
             href="/u/0/home"
-            className="flex items-center bg-(--accent) text-(--on-accent) px-5 py-2 rounded-full hover:opacity-90 transition-all duration-150 ease-out"
+            className="flex items-center bg-(--accent) text-(--on-accent) px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full hover:opacity-90 transition-all duration-150 ease-out text-xs sm:text-sm"
           >
             <span style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>Go to retop</span>
           </a>
@@ -74,12 +74,12 @@ export default function Navbar({
             target={isSupported ? "_blank" : "_self"}
             rel="noreferrer"
             id="nav-cta"
-            className={`flex items-center gap-2 bg-(--accent) text-(--on-accent) px-5 py-2 rounded-full font-bold text-sm hover:opacity-90 transition-all duration-150 ease-out group ${
+            className={`flex items-center gap-1.5 sm:gap-2 bg-(--accent) text-(--on-accent) px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full font-bold text-xs sm:text-sm hover:opacity-90 transition-all duration-150 ease-out group ${
               !isSupported ? "opacity-50 pointer-events-none grayscale" : ""
             }`}
           >
-            <Extension className="text-current w-4 h-4" />
-            <span className="text-sm tracking-tight mt-0.5">
+            <Extension className="text-current w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="tracking-tight mt-0.5 whitespace-nowrap">
               {isSupported ? "Install retop" : "Not supported"}
             </span>
           </a>

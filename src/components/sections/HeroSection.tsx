@@ -92,13 +92,13 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-dvh flex flex-col items-center justify-center px-6 md:px-12 pt-40 pb-16 z-20 gap-8 overflow-hidden"
+      className="relative w-full min-h-dvh flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 pt-28 md:pt-40 pb-16 z-20 gap-8 overflow-hidden"
     >
       <div className="flex flex-col items-center text-center max-w-4xl gap-6">
         <div className="group flex justify-center w-full pt-4 cursor-default">
           <h1
             ref={logoRef}
-            className="opacity-0 font-hero-base text-[clamp(4rem,10vw,8rem)] leading-none text-(--text-main) select-none lowercase tracking-tighter"
+            className="opacity-0 font-hero-base text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-(--text-main) select-none lowercase tracking-tighter"
             style={{
               fontVariationSettings:
                 '"wdth" var(--wdth, 151), "wght" var(--wght, 800), "GRAD" 100, "ROND" 100, "slnt" -10',
@@ -111,7 +111,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
         <div className="flex flex-col items-center gap-6">
           <p
             ref={subtextRef}
-            className="opacity-0 text-[clamp(1.4rem,3vw,2.2rem)] font-bold text-(--text-main) leading-tight tracking-tight max-w-2xl"
+            className="opacity-0 text-xl sm:text-2xl md:text-3xl font-bold text-(--text-main) leading-tight tracking-tight max-w-2xl"
             style={{
               fontVariationSettings:
                 '"wdth" var(--wdth, 151), "wght" var(--wght, 800), "GRAD" 100, "ROND" 0, "slnt" 0',
@@ -136,7 +136,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
               <a
                 href="/u/0/home"
                 id="hero-cta"
-                className="flex items-center justify-center bg-(--accent) text-(--on-accent) px-8 py-3.5 rounded-full hover:opacity-90 transition-all duration-150 ease-out"
+                className="flex items-center justify-center bg-(--accent) text-(--on-accent) px-6 sm:px-8 py-3.5 rounded-full hover:opacity-90 transition-all duration-150 ease-out max-w-full text-center"
               >
                 <span className="text-base md:text-lg" style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>Go to retop</span>
               </a>
@@ -146,7 +146,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
                 target={isSupported ? "_blank" : "_self"}
                 rel="noopener noreferrer"
                 id="hero-cta"
-                className={`flex items-center justify-center gap-3 bg-(--accent) text-(--on-accent) px-8 py-3.5 rounded-full font-bold text-base md:text-lg hover:opacity-90 transition-all duration-150 ease-out ${
+                className={`flex items-center justify-center gap-2 sm:gap-3 bg-(--accent) text-(--on-accent) px-6 sm:px-8 py-3.5 rounded-full font-bold text-base md:text-lg hover:opacity-90 transition-all duration-150 ease-out max-w-full text-center ${
                   !isSupported ? "opacity-50 pointer-events-none grayscale" : ""
                 }`}
               >
@@ -163,7 +163,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
       {/* Dashboard Mockup */}
       <div
         ref={mockupRef}
-        className="opacity-0 relative w-full max-w-380 px-4 md:px-8 pb-10 mx-auto mt-4"
+        className="opacity-0 relative w-full max-w-380 px-1 sm:px-6 md:px-8 pb-10 mx-auto mt-4 flex justify-center"
       >
           <DashboardMockup />
       </div>

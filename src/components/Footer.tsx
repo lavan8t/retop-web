@@ -13,11 +13,11 @@ interface FooterProps {
 
 export default function Footer({ chromeStoreUrl }: FooterProps) {
   return (
-    <footer className="w-full max-w-[100rem] mx-auto text-(--text-main) py-24 px-8 md:px-16 lg:px-24 flex flex-col md:flex-row justify-between gap-16 relative z-20">
+    <footer className="w-full max-w-[100rem] mx-auto text-(--text-main) py-16 md:py-24 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col md:flex-row justify-between gap-12 sm:gap-16 relative z-20">
       {/* Brand Column */}
       <div className="flex flex-col gap-6 max-w-xl">
         <h1
-          className="font-hero-base text-5xl md:text-6xl text-(--text-main) select-none leading-none tracking-tighter"
+          className="font-hero-base text-4xl sm:text-5xl md:text-6xl text-(--text-main) select-none leading-none tracking-tighter"
           style={{
             fontVariationSettings:
               '"wdth" var(--wdth, 151), "wght" var(--wght, 800), "GRAD" 100, "ROND" 100, "slnt" -10',
@@ -36,7 +36,7 @@ export default function Footer({ chromeStoreUrl }: FooterProps) {
       </div>
 
       {/* Link Columns */}
-      <div className="flex flex-wrap md:flex-nowrap gap-16 md:gap-24 lg:gap-32">
+      <div className="flex flex-wrap md:flex-nowrap gap-8 sm:gap-16 md:gap-24">
         
         {/* Legal */}
         <div className="flex flex-col gap-5">

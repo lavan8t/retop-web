@@ -10,16 +10,16 @@ export default function LegacySection() {
   const [isModernUI, setIsModernUI] = useState(false);
 
   return (
-    <section className="relative w-full max-w-6xl px-6 md:px-12 py-32 z-20 mx-auto text-center flex flex-col items-center gap-6">
-      <h2 className="font-title-base text-[clamp(2rem,4.5vw,3.5rem)] text-(--text-main) leading-none tracking-tighter">
+    <section className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 z-20 mx-auto text-center flex flex-col items-center gap-6">
+      <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none tracking-tighter">
         One click back to legacy
       </h2>
-      <p className="text-(--text-muted) text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
+      <p className="text-(--text-muted) text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
         We know change is hard. If you ever need to access the old VTOP for something we haven't ported yet, it's always just one click away right from the sidebar. No lock-in, just a better default.
       </p>
       
       {/* 16:9 Demo Container */}
-      <div className="relative w-full aspect-[16/10] mt-8 border border-(--border-subtle) rounded-[2rem] overflow-hidden bg-(--bg-surface)">
+      <div className="relative w-full aspect-[16/10] min-h-[240px] sm:min-h-[360px] mt-6 sm:mt-8 border border-(--border-subtle) rounded-2xl sm:rounded-[2rem] overflow-hidden bg-(--bg-surface)">
         
         {/* Legacy Background (Unthemed Static Skeletons based on image.png) */}
         <div className="absolute inset-0 flex flex-col bg-[#f5f6f8] select-none">
@@ -126,13 +126,13 @@ export default function LegacySection() {
         >
           {/* Modern Retop UI — same DashboardMockup as hero */}
           <div className="absolute inset-0 w-full h-full">
-            <DashboardMockup />
+            <DashboardMockup showDeviceFrame={false} className="w-full h-full" />
           </div>
         </motion.div>
 
         {/* The Shadow Host container for button */}
         <div className="absolute inset-0 pointer-events-none z-50">
-          <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 pointer-events-auto">
+          <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 pointer-events-auto">
             <LegacyReturnButton 
                onMouseEnter={() => setIsPeeking(true)}
                onMouseLeave={() => setIsPeeking(false)}

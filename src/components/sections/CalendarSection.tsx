@@ -20,12 +20,12 @@ export default function CalendarSection() {
 
   return (
     <section
-      className="relative w-full max-w-6xl px-6 md:px-12 py-32 z-20"
+      className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 z-20"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
         {/* Mini Calendar mockup */}
-        <div className="calendar-card bg-(--bg-card) border-[3px] border-(--bg-surface) rounded-2xl p-6">
-          <div className="flex items-center justify-between mb-4">
+        <div className="calendar-card bg-(--bg-card) border-[3px] border-(--bg-surface) rounded-2xl p-4 sm:p-6">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
             <h3 className="font-title-base text-base text-(--text-main) uppercase">
               November 2025
             </h3>
@@ -76,7 +76,7 @@ export default function CalendarSection() {
 
         {/* Text */}
         <div className="calendar-text flex flex-col gap-6">
-          <h2 className="font-title-base text-[clamp(2rem,4.5vw,3.5rem)] text-(--text-main) leading-none tracking-tighter">
+          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none tracking-tighter">
             Your semester in Google Calendar. One click.
           </h2>
           <div className="flex flex-col gap-6 mt-2 pr-4">

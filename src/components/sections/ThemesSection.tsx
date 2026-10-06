@@ -33,13 +33,13 @@ export default function ThemesSection() {
   const { themeMode, setThemeMode, accentName, setAccent } = useTheme();
 
   return (
-    <section className="relative w-full max-w-6xl px-6 md:px-12 py-32 flex flex-col gap-16 z-20">
+    <section className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 flex flex-col gap-8 sm:gap-12 md:gap-16 z-20">
       {/* Heading */}
       <div className="themes-heading flex flex-col gap-4">
-        <h2 className="font-title-base text-[clamp(2rem,5vw,4rem)] text-(--text-main) leading-none tracking-tighter">
+        <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-(--text-main) leading-none tracking-tighter">
           Make it yours.
         </h2>
-        <p className="text-(--text-muted) text-base leading-relaxed font-medium max-w-lg">
+        <p className="text-(--text-muted) text-base sm:text-lg leading-relaxed font-medium max-w-lg">
           11 accent presets. 3 theme modes. When you switch, the entire UI
           follows — every card, every border, every glow.
         </p>
@@ -47,7 +47,7 @@ export default function ThemesSection() {
 
       <div className="flex justify-center max-w-2xl mx-auto w-full">
         {/* Appearance Card — same structure as ext SettingTopicCard */}
-        <div className="appearance-box flex flex-col gap-6 bg-(--bg-card) border border-(--border-subtle) p-7 rounded-3xl w-full">
+        <div className="appearance-box flex flex-col gap-6 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-7 rounded-3xl w-full">
           <h3 className="text-xs font-bold text-(--text-muted) uppercase tracking-widest">
             Appearance
           </h3>
@@ -67,14 +67,14 @@ export default function ThemesSection() {
                     <button
                       key={id}
                       onClick={() => setThemeMode(id as any)}
-                      className={`flex flex-col items-center justify-center gap-2 p-3 w-20 h-20 rounded-2xl transition-all cursor-pointer border-0 ${
+                      className={`flex flex-col items-center justify-center gap-1.5 sm:gap-2 p-2 sm:p-3 w-16 sm:w-20 h-16 sm:h-20 rounded-2xl transition-all cursor-pointer border-0 ${
                         isActive
                           ? "bg-(--accent) text-(--on-accent) shadow-md"
                           : "bg-transparent hover:bg-(--border-subtle) text-(--text-muted) hover:text-(--text-main)"
                       }`}
                     >
-                      <Icon className="w-8 h-8 shrink-0" />
-                      <span className="text-[10px] font-bold uppercase tracking-wider">
+                      <Icon className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" />
+                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
                         {label}
                       </span>
                     </button>
@@ -88,14 +88,14 @@ export default function ThemesSection() {
               <span className="text-xs font-bold text-(--text-muted) uppercase tracking-wider">
                 Accent
               </span>
-              <div className="flex flex-nowrap overflow-x-auto [&::-webkit-scrollbar]:hidden gap-3 snap-x py-3 px-1 min-w-0">
+              <div className="flex flex-nowrap overflow-x-auto [&::-webkit-scrollbar]:hidden gap-2.5 sm:gap-3 snap-x py-3 px-1 min-w-0">
                 {COLORS.map((c) => {
                   const isActive = accentName.toLowerCase() === c.id;
                   return (
                     <button
                       key={c.id}
                       onClick={() => setAccent(c.label, c.hex)}
-                      className={`w-9 h-9 rounded-full flex items-center justify-center transition-all shrink-0 cursor-pointer ${
+                      className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-all shrink-0 cursor-pointer ${
                         isActive
                           ? "ring-2 ring-offset-2 ring-(--text-main) scale-105"
                           : "hover:scale-105 opacity-80 hover:opacity-100"

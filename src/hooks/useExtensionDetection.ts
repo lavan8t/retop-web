@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 
+declare global {
+  interface Window {
+    __RETOP_EXTENSION_INSTALLED__?: boolean;
+  }
+}
+
 export function useExtensionDetection() {
   const [isInstalled, setIsInstalled] = useState(false);
 
@@ -9,7 +15,7 @@ export function useExtensionDetection() {
     const check = () => {
       if (
         localStorage.getItem("__RETOP_EXT_PRESENT__") === "true" ||
-        (window as any).__RETOP_EXTENSION_INSTALLED__ === true ||
+        window.__RETOP_EXTENSION_INSTALLED__ === true ||
         document.documentElement.getAttribute("data-retop-extension") === "true" ||
         window.location.search.includes("installed=true")
       ) {
