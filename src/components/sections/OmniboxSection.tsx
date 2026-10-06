@@ -87,7 +87,7 @@ export default function OmniboxSection() {
           {/* Search input */}
           <div className="flex items-center gap-3 bg-(--bg-card) border-2 border-(--accent)/40 rounded-xl px-4 py-3">
             <Search className="text-(--text-muted) w-5 h-5" />
-            <span className="text-(--text-main) font-mono text-sm">
+            <span className="text-(--text-main) text-sm">
               timetable
               <span className="animate-pulse text-(--accent)">|</span>
             </span>

@@ -12,7 +12,7 @@ import InstallCTASection from "@/components/sections/InstallCTASection";
 import Footer from "@/components/Footer";
 
 const CHROME_STORE_URL =
-  "https://chrome.google.com/webstore/detail/your-extension-id";
+  "https://chromewebstore.google.com/detail/retop/algmeibfbkahhjjgfkiifdnfcoomiigc?pli=1";
 
 export const metadata: Metadata = {
   title: "Home - retop",

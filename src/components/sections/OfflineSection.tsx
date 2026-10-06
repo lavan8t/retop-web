@@ -46,7 +46,7 @@ export default function OfflineSection() {
           <div className="bg-(--bg-card) p-6 flex flex-col gap-4 items-center justify-center border-r-[3px] border-(--border-subtle)">
             <div className="flex flex-col items-center gap-3">
               <div className="w-10 h-10 rounded-full border-2 border-(--text-muted) opacity-30 border-t-(--text-muted) animate-spin" />
-              <p className="text-center text-xs text-(--text-muted) font-mono leading-relaxed">
+              <p className="text-center text-xs text-(--text-muted) leading-relaxed">
                 Loading...
                 <br />
                 No connection.

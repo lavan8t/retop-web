@@ -60,16 +60,16 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
         <div className="flex items-center justify-between pt-1 pb-1">
           <div className="flex flex-col min-w-0 pr-2">
             <h1 className="text-base sm:text-lg font-bold tracking-tight text-(--text-main) truncate leading-tight">
-              Lavanbarath B
+              John Doe
             </h1>
             <span className="text-xs font-semibold text-(--text-muted) tracking-wide">
-              21BCE1234
+              21BCE0001
             </span>
           </div>
 
           <div className="relative shrink-0">
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-(--accent)/15 dark:bg-(--accent)/20 border border-(--accent)/30 flex items-center justify-center text-(--accent) font-bold text-base shadow-sm">
-              L
+              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3.3 0-8 1.7-8 5v1h16v-1c0-3.3-4.7-5-8-5Z"/></svg>
             </div>
             <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-(--bg-surface)" />
           </div>

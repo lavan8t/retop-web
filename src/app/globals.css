@@ -31,6 +31,9 @@
 @layer base {
   :root {
     --font-google-sans-flex: "Google Sans Flex", system-ui, sans-serif;
+        --font-sans: var(--font-google-sans-flex);
+        --font-mono: var(--font-google-sans-flex);
+        --font-serif: var(--font-google-sans-flex);
     /* ── Accent (overridden by JS via applyMaterialTheme) ── */
     --accent: var(--md-sys-color-primary, #d95a00); 
     --accent-dim: var(--md-sys-color-primary-container, #ff8a00);
@@ -112,17 +115,21 @@
 }
 
 body {
-  font-family: var(--font-google-sans-flex), sans-serif;
+  font-family: var(--font-google-sans-flex);
   font-variation-settings: "ROND" 100;
   background-color: transparent; /* Transparent so the fixed gradient shows */
   color: var(--text-main);
 }
 
+*,
 code,
 pre,
 kbd,
-samp {
-  font-family: inherit !important;
+samp,
+button,
+input,
+textarea {
+  font-family: var(--font-google-sans-flex);
 }
 
 @layer utilities {

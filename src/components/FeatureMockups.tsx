@@ -16,14 +16,12 @@ function AuthenticDigitalIDCard() {
       <div className="pt-2.5 sm:pt-3 text-center shrink-0">
         <div
           className="text-3xl sm:text-4xl font-bold text-black tracking-normal leading-none"
-          style={{ fontFamily: "'Times New Roman', Times, serif" }}
         >
           VTOP
         </div>
         <div className="mt-1 sm:mt-1.5 flex justify-center">
           <span
             className="text-[11px] sm:text-xs font-black text-black tracking-widest uppercase scale-x-110 sm:scale-x-120 inline-block transform"
-            style={{ fontFamily: "'Times New Roman', Times, serif" }}
           >
             CHENNAI CAMPUS
           </span>
