@@ -31,9 +31,9 @@
 @font-face {
   font-family: "Times New Roman";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400 900;
   font-display: swap;
-  src: url("/fonts/times_new_roman_bold_italic.ttf") format("truetype");
+  src: url("/fonts/times_new_roman_bold.ttf") format("truetype");
 }
 
 @font-face {

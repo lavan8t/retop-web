@@ -13,42 +13,42 @@ function AuthenticDigitalIDCard() {
   return (
     <div className="w-full max-w-[270px] sm:max-w-[285px] aspect-[296/462.5] bg-white text-slate-900 rounded-2xl shadow-xl flex flex-col justify-between overflow-hidden relative pointer-events-none select-none mx-auto">
       {/* Top Header */}
-      <div className="pt-2.5 sm:pt-3 text-center shrink-0">
+      <div className="pt-2 sm:pt-2.5 text-center shrink-0">
         <div
-          className="text-3xl sm:text-4xl font-bold text-black tracking-normal leading-none font-id-times"
-          style={{ fontFamily: "'Times New Roman', Times, serif" }}
+          className="text-[40px] sm:text-[46px] font-bold text-black tracking-tight leading-none font-id-times"
+          style={{ fontFamily: "'Times New Roman', Times, serif", fontStyle: "normal" }}
         >
           VTOP
         </div>
         <div className="mt-1 sm:mt-1.5 flex justify-center">
           <span
-            className="text-[11px] sm:text-xs font-black text-black tracking-widest uppercase scale-x-110 sm:scale-x-120 inline-block transform font-id-times"
-            style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            className="text-[12px] sm:text-[13px] font-black text-black tracking-widest uppercase scale-x-120 inline-block transform font-id-times"
+            style={{ fontFamily: "'Times New Roman', Times, serif", fontStyle: "normal" }}
           >
-            CHENNAI CAMPUS
+            VELLORE CAMPUS
           </span>
         </div>
       </div>
 
-      {/* 120x180 Neutral Student Avatar Placeholder */}
-      <div className="w-[114px] h-[166px] sm:w-[120px] sm:h-[180px] mx-auto mt-2 sm:mt-3 bg-slate-100 rounded overflow-hidden flex items-center justify-center shrink-0 shadow-xs relative">
-        <svg viewBox="0 0 120 180" className="w-full h-full" fill="none">
-          <rect width="120" height="180" fill="#f8fafc" />
-          <circle cx="60" cy="58" r="32" fill="#cbd5e1" />
-          <path d="M10 180 C10 126 34 116 60 116 C86 116 110 126 110 180 Z" fill="#cbd5e1" />
+      {/* 124x188 Neutral Student Avatar Placeholder */}
+      <div className="w-[118px] h-[174px] sm:w-[124px] sm:h-[188px] mx-auto mt-1 sm:mt-1.5 bg-slate-100 rounded overflow-hidden flex items-center justify-center shrink-0 shadow-xs relative">
+        <svg viewBox="0 0 124 188" className="w-full h-full" fill="none">
+          <rect width="124" height="188" fill="#f8fafc" />
+          <circle cx="62" cy="60" r="34" fill="#cbd5e1" />
+          <path d="M6 188 C6 132 32 122 62 122 C92 122 118 132 118 188 Z" fill="#cbd5e1" />
         </svg>
       </div>
 
       {/* Student Name & Reg No */}
-      <div className="flex flex-col items-center justify-center text-center px-2 mt-auto mb-2">
+      <div className="flex flex-col items-center justify-center text-center px-2 mt-auto mb-2 sm:mb-2.5">
         <span
-          className="font-bold text-base sm:text-lg text-[#181d79] tracking-wide uppercase leading-tight font-id-helvetica"
+          className="font-bold text-[22px] sm:text-[25px] text-[#181d79] tracking-wide uppercase leading-tight font-id-helvetica"
           style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
         >
           JOHN DOE
         </span>
         <span
-          className="font-bold text-xs sm:text-sm text-black tracking-normal mt-0.5 font-id-helvetica"
+          className="font-bold text-[17px] sm:text-[19px] text-black tracking-normal mt-1 sm:mt-1.5 leading-none font-id-helvetica"
           style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
         >
           21BCE0001
@@ -57,7 +57,7 @@ function AuthenticDigitalIDCard() {
 
       {/* Bottom Hosteller Banner */}
       <div
-        className="w-full bg-[#181d79] text-white font-bold text-center py-2 sm:py-2.5 rounded-b-xl text-xs sm:text-sm uppercase tracking-wider shrink-0 font-id-helvetica"
+        className="w-full bg-[#181d79] text-white font-bold text-center h-[38px] sm:h-[42px] flex items-center justify-center rounded-b-xl text-lg sm:text-[21px] uppercase tracking-wider shrink-0 font-id-helvetica"
         style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
       >
         HOSTELLER
