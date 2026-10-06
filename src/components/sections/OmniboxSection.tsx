@@ -48,7 +48,7 @@ export default function OmniboxSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
         {/* Text */}
         <div className="omnibox-heading flex flex-col gap-6">
-          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none tracking-tighter">
+          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none ">
             Press any key. Jump anywhere.
           </h2>
           <p className="text-(--text-muted) text-base sm:text-lg leading-relaxed font-medium max-w-md">
@@ -61,7 +61,7 @@ export default function OmniboxSection() {
           </p>
           <div className="flex flex-col gap-6 mt-2 pr-4">
             <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase tracking-wider text-sm">
+              <h3 className="text-(--text-main) uppercase r text-sm">
                 Lightning Fast
               </h3>
               <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
@@ -71,7 +71,7 @@ export default function OmniboxSection() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase tracking-wider text-sm">
+              <h3 className="text-(--text-main) uppercase r text-sm">
                 University Spotlight
               </h3>
               <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
@@ -116,7 +116,7 @@ export default function OmniboxSection() {
                   </div>
                 </div>
                 {i === 0 && (
-                  <span className="ml-auto flex items-center gap-1 text-[10px] text-(--accent) tracking-wider">
+                  <span className="ml-auto flex items-center gap-1 text-[10px] text-(--accent) r">
                     Enter <KeyboardReturn className="w-3 h-3" />
                   </span>
                 )}

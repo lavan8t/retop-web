@@ -41,7 +41,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
         {/* Left: Logo */}
         <div className="flex items-center shrink-0">
           <div
-            className="font-hero-base text-2xl font-black text-(--text-main) tracking-tighter lowercase leading-none flex items-center"
+            className="font-hero-base text-2xl font-black text-(--text-main) lowercase leading-none flex items-center"
             style={{
               fontVariationSettings: '"wdth" 151, "wght" 900, "slnt" -10',
             }}
@@ -85,7 +85,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
           <div className="rounded-2xl bg-(--bg-card) border border-(--border-subtle) p-3.5 flex flex-col gap-2.5 shadow-sm">
             <div className="flex items-center justify-between pb-2 border-b border-(--border-subtle)">
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold tracking-wider uppercase text-(--text-muted)">
+                <span className="text-[10px] font-bold r uppercase text-(--text-muted)">
                   Attendance
                 </span>
                 <span className="text-2xl font-black text-(--text-main) leading-none mt-0.5">
@@ -134,7 +134,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
 
             {/* Academics Links */}
             <div className="space-y-1.5">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-(--text-muted)">
+              <span className="text-[10px] font-bold uppercase r text-(--text-muted)">
                 Academics
               </span>
               <div className="flex flex-wrap gap-1">
@@ -151,7 +151,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
 
             {/* Events */}
             <div className="space-y-1.5 pt-1.5 border-t border-(--border-subtle)">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-(--text-muted)">
+              <span className="text-[10px] font-bold uppercase r text-(--text-muted)">
                 Events
               </span>
               <div className="space-y-1.5 text-[11px]">
@@ -182,7 +182,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
           <div className="rounded-2xl bg-(--bg-card) border border-(--border-subtle) p-4 flex flex-col gap-2.5 shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-base sm:text-lg font-black tracking-tight text-(--text-main) uppercase leading-none">
+                <h2 className="text-base sm:text-lg font-black text-(--text-main) uppercase leading-none">
                   October 2026
                 </h2>
                 <p className="text-[11px] font-bold text-(--text-muted) mt-1">
@@ -190,7 +190,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                 </p>
               </div>
               <div className="flex flex-col items-end">
-                <span className="text-[10px] font-black tracking-wide uppercase text-(--accent)">
+                <span className="text-[10px] font-black uppercase text-(--accent)">
                   68% Completed
                 </span>
                 <span className="text-[10px] font-medium text-(--text-muted)">
@@ -330,7 +330,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                   {showExams && (
                     <div className="rounded-t-[16px] rounded-b-[4px] bg-[#271435] dark:bg-[#230f30] p-3 flex flex-col gap-1.5 shadow-sm">
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-black uppercase tracking-wider text-purple-300">
+                        <span className="text-[10px] font-black uppercase r text-purple-300">
                           EXAM - CAT 1
                         </span>
                         <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-600/40 text-purple-200">
@@ -380,20 +380,20 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
           <div className="rounded-2xl bg-(--bg-card) border border-(--border-subtle) p-4 flex flex-col gap-3 shadow-sm">
             <div className="flex items-center justify-between">
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-(--text-muted)">
+                <span className="text-[10px] font-bold uppercase r text-(--text-muted)">
                   CGPA
                 </span>
-                <span className="text-3xl font-black tracking-tight text-(--text-main) mt-0.5 leading-none">
+                <span className="text-3xl font-black text-(--text-main) mt-0.5 leading-none">
                   9.42
                 </span>
               </div>
 
               <div className="flex flex-col items-end">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-(--text-muted)">
+                <span className="text-[10px] font-bold uppercase r text-(--text-muted)">
                   CREDITS
                 </span>
                 <div className="flex items-baseline gap-1 mt-0.5 leading-none">
-                  <span className="text-3xl font-black tracking-tight text-(--text-main)">
+                  <span className="text-3xl font-black text-(--text-main)">
                     142
                   </span>
                   <span className="text-xs font-bold text-(--text-muted)">
@@ -407,7 +407,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
           {/* Pending Assessments Card */}
           <div className="rounded-2xl bg-(--bg-card) border border-(--border-subtle) p-3.5 flex flex-col gap-2.5 shadow-sm">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-(--accent) tracking-wide">
+              <span className="text-xs font-bold text-(--accent) ">
                 Pending assessments
               </span>
               <span className="text-[10px] font-bold text-(--text-muted) uppercase">

@@ -36,7 +36,7 @@ export default function ThemesSection() {
     <section className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 flex flex-col gap-8 sm:gap-12 md:gap-16 z-20">
       {/* Heading */}
       <div className="themes-heading flex flex-col gap-4">
-        <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-(--text-main) leading-none tracking-tighter">
+        <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-(--text-main) leading-none ">
           Make it yours.
         </h2>
         <p className="text-(--text-muted) text-base sm:text-lg leading-relaxed font-medium max-w-lg">
@@ -48,14 +48,14 @@ export default function ThemesSection() {
       <div className="flex justify-center max-w-2xl mx-auto w-full">
         {/* Appearance Card — same structure as ext SettingTopicCard */}
         <div className="appearance-box flex flex-col gap-6 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-7 rounded-3xl w-full">
-          <h3 className="text-xs font-bold text-(--text-muted) uppercase tracking-widest">
+          <h3 className="text-xs font-bold text-(--text-muted) uppercase st">
             Appearance
           </h3>
 
           <div className="flex flex-col gap-6 w-full">
             {/* Color Scheme — icon button grid, same as ext */}
             <div className="flex flex-col gap-2 w-full">
-              <span className="text-xs font-bold text-(--text-muted) uppercase tracking-wider">
+              <span className="text-xs font-bold text-(--text-muted) uppercase r">
                 Color Scheme
               </span>
               <div className="flex items-center justify-around w-full py-2">
@@ -74,7 +74,7 @@ export default function ThemesSection() {
                       }`}
                     >
                       <Icon className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" />
-                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
+                      <span className="text-[9px] sm:text-[10px] font-bold uppercase r">
                         {label}
                       </span>
                     </button>
@@ -85,7 +85,7 @@ export default function ThemesSection() {
 
             {/* Accent dots — same as ext */}
             <div className="flex flex-col gap-2 w-full">
-              <span className="text-xs font-bold text-(--text-muted) uppercase tracking-wider">
+              <span className="text-xs font-bold text-(--text-muted) uppercase r">
                 Accent
               </span>
               <div className="flex flex-nowrap overflow-x-auto [&::-webkit-scrollbar]:hidden gap-2.5 sm:gap-3 snap-x py-3 px-1 min-w-0">

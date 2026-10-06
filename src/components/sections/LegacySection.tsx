@@ -11,7 +11,7 @@ export default function LegacySection() {
 
   return (
     <section className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 z-20 mx-auto text-center flex flex-col items-center gap-6">
-      <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none tracking-tighter">
+      <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none ">
         One click back to legacy
       </h2>
       <p className="text-(--text-muted) text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-2xl">

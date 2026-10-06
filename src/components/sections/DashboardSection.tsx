@@ -12,7 +12,7 @@ export default function DashboardSection({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 sm:gap-x-12 md:gap-x-16 gap-y-8 sm:gap-y-12">
         {/* Section 1 */}
         <div className="flex flex-col gap-2.5 sm:gap-3">
-          <h3 className="font-title-base text-xl sm:text-2xl md:text-3xl text-(--text-main) tracking-tight font-bold">
+          <h3 className="font-title-base text-xl sm:text-2xl md:text-3xl text-(--text-main) font-bold">
             No more digging around
           </h3>
           <p className="text-(--text-muted) text-sm sm:text-base md:text-lg leading-relaxed font-medium">
@@ -22,7 +22,7 @@ export default function DashboardSection({
 
         {/* Section 2 */}
         <div className="flex flex-col gap-2.5 sm:gap-3">
-          <h3 className="font-title-base text-xl sm:text-2xl md:text-3xl text-(--text-main) tracking-tight font-bold">
+          <h3 className="font-title-base text-xl sm:text-2xl md:text-3xl text-(--text-main) font-bold">
             Attendance at a glance
           </h3>
           <p className="text-(--text-muted) text-sm sm:text-base md:text-lg leading-relaxed font-medium">
@@ -32,7 +32,7 @@ export default function DashboardSection({
 
         {/* Section 3 */}
         <div className="flex flex-col gap-2.5 sm:gap-3">
-          <h3 className="font-title-base text-xl sm:text-2xl md:text-3xl text-(--text-main) tracking-tight font-bold">
+          <h3 className="font-title-base text-xl sm:text-2xl md:text-3xl text-(--text-main) font-bold">
             The whole semester, mapped out
           </h3>
           <p className="text-(--text-muted) text-sm sm:text-base md:text-lg leading-relaxed font-medium">
@@ -42,7 +42,7 @@ export default function DashboardSection({
 
         {/* Section 4 */}
         <div className="flex flex-col gap-2.5 sm:gap-3">
-          <h3 className="font-title-base text-xl sm:text-2xl md:text-3xl text-(--text-main) tracking-tight font-bold">
+          <h3 className="font-title-base text-xl sm:text-2xl md:text-3xl text-(--text-main) font-bold">
             Your day, synced and ready
           </h3>
           <p className="text-(--text-muted) text-sm sm:text-base md:text-lg leading-relaxed font-medium">

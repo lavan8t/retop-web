@@ -15,14 +15,14 @@ function AuthenticDigitalIDCard() {
       {/* Top Header */}
       <div className="pt-2 sm:pt-2.5 text-center shrink-0">
         <div
-          className="text-[40px] sm:text-[46px] font-bold text-black tracking-tight leading-none font-id-times"
+          className="text-[40px] sm:text-[46px] font-bold text-black leading-none font-id-times"
           style={{ fontFamily: "'Times New Roman', Times, serif", fontStyle: "normal" }}
         >
           VTOP
         </div>
         <div className="mt-1 sm:mt-1.5 flex justify-center">
           <span
-            className="text-[12px] sm:text-[13px] font-black text-black tracking-widest uppercase scale-x-120 inline-block transform font-id-times"
+            className="text-[12px] sm:text-[13px] font-black text-black st uppercase scale-x-120 inline-block transform font-id-times"
             style={{ fontFamily: "'Times New Roman', Times, serif", fontStyle: "normal" }}
           >
             VELLORE CAMPUS
@@ -42,13 +42,13 @@ function AuthenticDigitalIDCard() {
       {/* Student Name & Reg No */}
       <div className="flex flex-col items-center justify-center text-center px-2 mt-auto mb-2 sm:mb-2.5">
         <span
-          className="font-bold text-[22px] sm:text-[25px] text-[#181d79] tracking-wide uppercase leading-tight font-id-helvetica"
+          className="font-bold text-[22px] sm:text-[25px] text-[#181d79] leading-tight font-id-helvetica"
           style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
         >
-          JOHN DOE
+          John Doe
         </span>
         <span
-          className="font-bold text-[17px] sm:text-[19px] text-black tracking-normal mt-1 sm:mt-1.5 leading-none font-id-helvetica"
+          className="font-bold text-[17px] sm:text-[19px] text-black mt-1 sm:mt-1.5 leading-none font-id-helvetica"
           style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
         >
           21BCE0001
@@ -57,7 +57,7 @@ function AuthenticDigitalIDCard() {
 
       {/* Bottom Hosteller Banner */}
       <div
-        className="w-full bg-[#181d79] text-white font-bold text-center h-[38px] sm:h-[42px] flex items-center justify-center rounded-b-xl text-lg sm:text-[21px] uppercase tracking-wider shrink-0 font-id-helvetica"
+        className="w-full bg-[#181d79] text-white font-bold text-center h-[38px] sm:h-[42px] flex items-center justify-center rounded-b-xl text-lg sm:text-[21px] uppercase r shrink-0 font-id-helvetica"
         style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
       >
         HOSTELLER
@@ -229,7 +229,7 @@ function MobileScheduleCard() {
       {/* Active Class - No border on pill */}
       <div className="rounded-2xl p-3 bg-(--accent)/15 flex flex-col gap-1">
         <div className="flex items-center justify-between">
-          <span className="px-1.5 py-0.5 rounded text-[8px] font-black uppercase tracking-wider bg-(--accent) text-(--on-accent)">
+          <span className="px-1.5 py-0.5 rounded text-[8px] font-black uppercase r bg-(--accent) text-(--on-accent)">
             NOW
           </span>
           <span className="text-[11px] font-bold text-(--accent)">08:00 - 08:50 AM</span>
@@ -279,7 +279,7 @@ function MobileCgpaCard() {
 
       {/* Pending Assessments */}
       <div className="flex flex-col gap-2">
-        <span className="text-[11px] font-bold text-(--text-muted) uppercase tracking-wider px-1">
+        <span className="text-[11px] font-bold text-(--text-muted) uppercase r px-1">
           Pending Assessments
         </span>
         {[
@@ -411,7 +411,7 @@ export function FeatureMockups() {
 
           {/* Center Section Title - Clean, no background box */}
           <div className="w-full flex flex-col items-center justify-center text-center px-4 py-4 sm:py-6 select-none">
-            <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-(--text-main) leading-tight tracking-tighter font-bold">
+            <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-(--text-main) leading-tight font-bold">
               Built beautiful.
               <br />
               Not patched beautiful.

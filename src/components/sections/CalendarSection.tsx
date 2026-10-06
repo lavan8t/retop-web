@@ -76,12 +76,12 @@ export default function CalendarSection() {
 
         {/* Text */}
         <div className="calendar-text flex flex-col gap-6">
-          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none tracking-tighter">
+          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none ">
             Your semester in Google Calendar. One click.
           </h2>
           <div className="flex flex-col gap-6 mt-2 pr-4">
             <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase tracking-wider text-sm">
+              <h3 className="text-(--text-main) uppercase r text-sm">
                 Full Google Sync
               </h3>
               <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
@@ -92,7 +92,7 @@ export default function CalendarSection() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase tracking-wider text-sm">
+              <h3 className="text-(--text-main) uppercase r text-sm">
                 Unified Scheduling
               </h3>
               <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">

@@ -38,7 +38,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
       {/* ── STATUS BAR (in-device top status indicators) ── */}
       {showDeviceFrame && (
         <div className="flex items-center justify-between px-5 pt-3 pb-1 shrink-0 text-(--text-muted) select-none">
-          <span className="text-[11px] font-bold tracking-tight text-(--text-main)">9:41</span>
+          <span className="text-[11px] font-bold text-(--text-main)">9:41</span>
           {/* Camera cutout */}
           <div className="w-3.5 h-3.5 rounded-full bg-black border border-white/10 shadow-inner flex items-center justify-center">
             <div className="w-1 h-1 rounded-full bg-[#1a233a] opacity-80" />
@@ -59,10 +59,10 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
         {/* 1. Header Topbar */}
         <div className="flex items-center justify-between pt-1 pb-1">
           <div className="flex flex-col min-w-0 pr-2">
-            <h1 className="text-base sm:text-lg font-bold tracking-tight text-(--text-main) truncate leading-tight">
+            <h1 className="text-base sm:text-lg font-bold text-(--text-main) truncate leading-tight">
               John Doe
             </h1>
-            <span className="text-xs font-semibold text-(--text-muted) tracking-wide">
+            <span className="text-xs font-semibold text-(--text-muted) ">
               21BCE0001
             </span>
           </div>
@@ -78,20 +78,20 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
         <div className="rounded-[24px] bg-(--bg-card) border border-(--border-subtle) px-5 py-3.5 shadow-sm">
           <div className="flex items-center justify-between">
             <div className="flex flex-col">
-              <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase text-(--text-muted)">
+              <span className="text-[10px] sm:text-[11px] font-bold r uppercase text-(--text-muted)">
                 CGPA
               </span>
-              <span className="text-2xl sm:text-3xl font-black tracking-tight text-(--text-main) mt-0.5 leading-none">
+              <span className="text-2xl sm:text-3xl font-black text-(--text-main) mt-0.5 leading-none">
                 9.42
               </span>
             </div>
 
             <div className="flex flex-col items-end">
-              <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase text-(--text-muted)">
+              <span className="text-[10px] sm:text-[11px] font-bold r uppercase text-(--text-muted)">
                 CREDITS
               </span>
               <div className="flex items-baseline gap-1 mt-0.5 leading-none">
-                <span className="text-2xl sm:text-3xl font-black tracking-tight text-(--text-main)">
+                <span className="text-2xl sm:text-3xl font-black text-(--text-main)">
                   142
                 </span>
                 <span className="text-xs sm:text-sm font-bold text-(--text-muted)">
@@ -115,7 +115,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
           </div>
 
           <div className="flex items-center gap-1 shrink-0">
-            <span className="text-2xl sm:text-[26px] font-black tracking-tight text-(--text-main)">
+            <span className="text-2xl sm:text-[26px] font-black text-(--text-main)">
               94%
             </span>
             <ChevronRight style={{ width: 18, height: 18, color: "var(--text-muted)" }} />
@@ -125,7 +125,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
         {/* 4. Pending Assessments Card (rounded-3xl) */}
         <div className="rounded-[24px] bg-(--bg-card) border border-(--border-subtle) p-3.5 sm:p-4 space-y-2 shadow-sm">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-(--accent) tracking-wide">
+            <span className="text-xs font-bold text-(--accent) ">
               Pending assessments
             </span>
             <span className="text-[10px] font-bold text-(--text-muted) uppercase">
@@ -169,7 +169,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
         {/* 5. Month & Semester Header + Filter Chips */}
         <div className="pt-1.5 space-y-2.5">
           <div className="flex flex-col">
-            <h2 className="text-lg sm:text-xl font-black tracking-tight text-(--text-main) uppercase leading-none">
+            <h2 className="text-lg sm:text-xl font-black text-(--text-main) uppercase leading-none">
               OCTOBER 2026
             </h2>
             <p className="text-[11px] font-bold text-(--text-muted) mt-1">
@@ -265,7 +265,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                 {showExams && (
                   <div className="rounded-t-[18px] rounded-b-[4px] bg-[#271435] dark:bg-[#230f30] p-3 sm:p-3.5 flex flex-col gap-1.5 shadow-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-black uppercase tracking-wider text-purple-300">
+                      <span className="text-[10px] font-black uppercase r text-purple-300">
                         EXAM - CAT 1
                       </span>
                       <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-600/40 text-purple-200">

@@ -17,7 +17,7 @@ export default function Footer({ chromeStoreUrl }: FooterProps) {
       {/* Brand Column */}
       <div className="flex flex-col gap-6 max-w-xl">
         <h1
-          className="font-hero-base text-4xl sm:text-5xl md:text-6xl text-(--text-main) select-none leading-none tracking-tighter"
+          className="font-hero-base text-4xl sm:text-5xl md:text-6xl text-(--text-main) select-none leading-none "
           style={{
             fontVariationSettings:
               '"wdth" var(--wdth, 151), "wght" var(--wght, 800), "GRAD" 100, "ROND" 100, "slnt" -10',
@@ -40,7 +40,7 @@ export default function Footer({ chromeStoreUrl }: FooterProps) {
         
         {/* Legal */}
         <div className="flex flex-col gap-5">
-          <span className="text-(--text-main) font-black uppercase tracking-wider text-sm mb-2">Legal stuff</span>
+          <span className="text-(--text-main) font-black uppercase r text-sm mb-2">Legal stuff</span>
           <Link href="/privacy" className="text-sm text-(--text-muted) hover:text-(--accent) font-medium transition-colors duration-150">
             Privacy policy
           </Link>
@@ -51,7 +51,7 @@ export default function Footer({ chromeStoreUrl }: FooterProps) {
 
         {/* Resources */}
         <div className="flex flex-col gap-5">
-          <span className="text-(--text-main) font-black uppercase tracking-wider text-sm mb-2">Resources</span>
+          <span className="text-(--text-main) font-black uppercase r text-sm mb-2">Resources</span>
           <a href={chromeStoreUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-(--text-muted) hover:text-(--accent) font-medium transition-colors duration-150">
             Web Store
           </a>

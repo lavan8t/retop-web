@@ -84,7 +84,7 @@ export default function Navbar({
             }`}
           >
             <Extension className="text-current w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-            <span className="tracking-tight mt-0.5 whitespace-nowrap">
+            <span className="mt-0.5 whitespace-nowrap">
               {isSupported ? "Install retop" : "Not supported"}
             </span>
           </a>

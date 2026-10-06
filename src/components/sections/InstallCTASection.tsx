@@ -28,7 +28,7 @@ export default function InstallCTASection({
       <div className="cta-content relative grid grid-cols-1 lg:grid-cols-2 items-center gap-10 sm:gap-16 max-w-7xl mx-auto w-full">
         {/* Left Column: Heading & CTA */}
         <div className="flex flex-col items-start text-left gap-6 sm:gap-8">
-          <h2 className="font-title-base text-3xl sm:text-5xl md:text-6xl text-(--text-main) leading-none tracking-tighter">
+          <h2 className="font-title-base text-3xl sm:text-5xl md:text-6xl text-(--text-main) leading-none ">
             Stop tolerating VTOP.
             <br />
             <span className="text-(--accent)">Start loving it.</span>
@@ -54,7 +54,7 @@ export default function InstallCTASection({
                 }`}
               >
                 <Extension className="text-current text-2xl" />
-                <span className="tracking-tighter mt-0.5">
+                <span className="mt-0.5">
                   {isSupported ? "Install retop" : "Browser not supported"}
                 </span>
               </a>
@@ -65,29 +65,29 @@ export default function InstallCTASection({
         {/* Right Column: Bento Grid Features */}
         <div className="grid grid-cols-1 md:grid-cols-6 gap-3 sm:gap-4 w-full">
           <div className="md:col-span-4 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
-            <span className="text-base sm:text-lg md:text-xl text-(--text-main) tracking-tighter text-center">
+            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {checklist[0]}
             </span>
           </div>
           <div className="md:col-span-2 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
-            <span className="text-base sm:text-lg md:text-xl text-(--text-main) tracking-tighter text-center">
+            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {checklist[1]}
             </span>
           </div>
 
           <div className="md:col-span-2 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
-            <span className="text-base sm:text-lg md:text-xl text-(--text-main) tracking-tighter text-center">
+            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {checklist[2]}
             </span>
           </div>
           <div className="md:col-span-4 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
-            <span className="text-base sm:text-lg md:text-xl text-(--text-main) tracking-tighter text-center">
+            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {checklist[3]}
             </span>
           </div>
 
           <div className="md:col-span-6 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
-            <span className="text-base sm:text-lg md:text-xl text-(--text-main) tracking-tighter text-center">
+            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {checklist[4]}
             </span>
           </div>

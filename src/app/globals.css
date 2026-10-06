@@ -154,6 +154,8 @@ body {
 }
 
 *,
+*::before,
+*::after,
 code,
 pre,
 kbd,
@@ -162,6 +164,7 @@ button,
 input,
 textarea {
   font-family: var(--font-google-sans-flex);
+  letter-spacing: normal !important;
 }
 
 @layer utilities {

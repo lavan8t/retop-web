@@ -98,7 +98,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
         <div className="group flex justify-center w-full pt-4 cursor-default">
           <h1
             ref={logoRef}
-            className="opacity-0 font-hero-base text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-(--text-main) select-none lowercase tracking-tighter"
+            className="opacity-0 font-hero-base text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-(--text-main) select-none lowercase "
             style={{
               fontVariationSettings:
                 '"wdth" var(--wdth, 151), "wght" var(--wght, 800), "GRAD" 100, "ROND" 100, "slnt" -10',
@@ -111,7 +111,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
         <div className="flex flex-col items-center gap-6">
           <p
             ref={subtextRef}
-            className="opacity-0 text-xl sm:text-2xl md:text-3xl font-bold text-(--text-main) leading-tight tracking-tight max-w-2xl"
+            className="opacity-0 text-xl sm:text-2xl md:text-3xl font-bold text-(--text-main) leading-tight max-w-2xl"
             style={{
               fontVariationSettings:
                 '"wdth" var(--wdth, 151), "wght" var(--wght, 800), "GRAD" 100, "ROND" 0, "slnt" 0',
@@ -151,7 +151,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
                 }`}
               >
                 <Extension className="text-current text-2xl" />
-                <span className="tracking-tighter mt-0.5">
+                <span className="mt-0.5">
                   {isSupported ? "Install retop" : "Browser not supported"}
                 </span>
               </a>

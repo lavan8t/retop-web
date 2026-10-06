@@ -12,12 +12,12 @@ export default function OfflineSection() {
         {/* Text */}
         <div className="offline-text flex flex-col gap-6">
           <CloudOff className="text-(--accent) text-5xl drop-shadow-md" />
-          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none tracking-tighter">
+          <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none ">
             Even when WiFi gives up, retop doesn&apos;t.
           </h2>
           <div className="flex flex-col gap-6 mt-2 pr-4">
             <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase tracking-wider text-sm">
+              <h3 className="text-(--text-main) uppercase r text-sm">
                 Instant Access
               </h3>
               <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
@@ -28,7 +28,7 @@ export default function OfflineSection() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase tracking-wider text-sm">
+              <h3 className="text-(--text-main) uppercase r text-sm">
                 Background Sync
               </h3>
               <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
@@ -52,7 +52,7 @@ export default function OfflineSection() {
                 No connection.
               </p>
             </div>
-            <span className="text-[9px] tracking-wider text-(--text-muted) opacity-50 mt-2">
+            <span className="text-[9px] r text-(--text-muted) opacity-50 mt-2">
               Old VTOP
             </span>
           </div>
@@ -70,14 +70,14 @@ export default function OfflineSection() {
                     <span className="text-xs text-(--text-muted) font-medium">
                       {item}
                     </span>
-                    <span className="ml-auto text-[9px] text-(--accent) tracking-wide">
+                    <span className="ml-auto text-[9px] text-(--accent) ">
                       Cached
                     </span>
                   </div>
                 ))}
               </div>
             </div>
-            <span className="text-[9px] tracking-wider text-(--accent) opacity-60 mt-2">
+            <span className="text-[9px] r text-(--accent) opacity-60 mt-2">
               retop
             </span>
           </div>

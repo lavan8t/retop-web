@@ -21,7 +21,7 @@ export default function PrivacyPage() {
 
       <section className="relative w-full max-w-3xl px-6 md:px-12 pt-48 pb-32 z-20 flex flex-col gap-6 text-(--text-main)">
         <div>
-          <h1 className="font-hero-base text-5xl md:text-6xl text-(--text-main) select-none leading-none tracking-tighter mb-4"
+          <h1 className="font-hero-base text-5xl md:text-6xl text-(--text-main) select-none leading-none mb-4"
               style={{ fontVariationSettings: '"wdth" 125, "wght" 800, "GRAD" 100, "ROND" 100, "slnt" -10' }}>
             Privacy Policy
           </h1>
@@ -30,18 +30,18 @@ export default function PrivacyPage() {
 
         <div className="flex flex-col gap-4 mt-8">
           
-          <h3 className="font-title-base text-2xl text-(--text-main) tracking-tighter">Your Data Is Yours</h3>
+          <h3 className="font-title-base text-2xl text-(--text-main) ">Your Data Is Yours</h3>
           <p className="text-(--text-muted) font-medium leading-relaxed">
             retop does not collect, steal, transmit, or monetize your data. Everything required for the extension to function is cached entirely locally on your own device.
             Neither the maintainers, nor any third parties, have access to your academic data.
           </p>
 
-          <h3 className="font-title-base text-2xl text-(--text-main) tracking-tighter mt-6">Zero Analytics</h3>
+          <h3 className="font-title-base text-2xl text-(--text-main) mt-6">Zero Analytics</h3>
           <p className="text-(--text-muted) font-medium leading-relaxed">
             There is absolutely no telemetry, usage tracking, or analytics baked into retop. We have no idea how you use the extension, and we prefer it that way.
           </p>
           
-          <h3 className="font-title-base text-2xl text-(--text-main) tracking-tighter mt-6">Third-party Providers</h3>
+          <h3 className="font-title-base text-2xl text-(--text-main) mt-6">Third-party Providers</h3>
           <p className="text-(--text-muted) font-medium leading-relaxed">
             retop operates entirely within your browser and interacts directly with the VTOP servers.
           </p>
@@ -49,13 +49,13 @@ export default function PrivacyPage() {
             <li><strong>Third-party services used: None.</strong></li>
           </ul>
 
-          <h3 className="font-title-base text-2xl text-(--text-main) tracking-tighter mt-6">No Affiliation with VIT</h3>
+          <h3 className="font-title-base text-2xl text-(--text-main) mt-6">No Affiliation with VIT</h3>
           <p className="text-(--text-muted) font-medium leading-relaxed">
             retop is an independent, community-driven project and is <strong>not affiliated with, endorsed by, authorized by, or in any way connected to Vellore Institute of Technology (VIT).</strong> 
             VTOP™ is a registered trademark of Vellore Institute of Technology.
           </p>
 
-          <h3 className="font-title-base text-2xl text-(--text-main) tracking-tighter mt-6">Changes to this Policy</h3>
+          <h3 className="font-title-base text-2xl text-(--text-main) mt-6">Changes to this Policy</h3>
           <p className="text-(--text-muted) font-medium leading-relaxed">
             We reserve the right to update this Privacy Policy from time to time. Continued use of retop after
             changes take effect constitutes acceptance of the revised policy.

@@ -16,7 +16,7 @@ export default function GlobalError({
           <div className="w-12 h-12 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center text-xl font-bold">
             !
           </div>
-          <h2 className="text-2xl font-bold tracking-tight">Something went wrong</h2>
+          <h2 className="text-2xl font-bold ">Something went wrong</h2>
           <p className="text-sm text-neutral-400 leading-relaxed">
             {error?.message || "An unexpected error occurred in the application."}
           </p>
