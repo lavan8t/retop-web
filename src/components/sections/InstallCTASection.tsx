@@ -5,17 +5,11 @@ import { Extension, CloudOff, ArrowForward } from "@nine-thirty-five/material-sy
 import { useBrowserDetection } from "@/hooks/useBrowserDetection";
 import { useExtensionDetection } from "@/hooks/useExtensionDetection";
 
+import { installCtaCopy } from "@/content/copy";
+
 interface InstallCTASectionProps {
   chromeStoreUrl: string;
 }
-
-const checklist = [
-  "Beautiful, modern UI across every page",
-  "Offline access always fast",
-  "Google Calendar sync",
-  "11 accent themes + AMOLED mode",
-  "Instant navigation with the Omnibox",
-];
 
 export default function InstallCTASection({
   chromeStoreUrl,
@@ -29,9 +23,9 @@ export default function InstallCTASection({
         {/* Left Column: Heading & CTA */}
         <div className="flex flex-col items-start text-left gap-6 sm:gap-8">
           <h2 className="font-title-base text-3xl sm:text-5xl md:text-6xl text-(--text-main) leading-none ">
-            Stop tolerating VTOP.
+            {installCtaCopy.headingLine1}
             <br />
-            <span className="text-(--accent)">Start loving it.</span>
+            <span className="text-(--accent)">{installCtaCopy.headingLine2}</span>
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-2 sm:mt-4 w-full">
@@ -41,7 +35,7 @@ export default function InstallCTASection({
                 id="bottom-cta"
                 className="flex items-center justify-center bg-(--accent) text-(--on-accent) px-6 sm:px-8 py-3.5 sm:py-4 rounded-full hover:opacity-90 transition-all duration-150 ease-out text-center max-w-full"
               >
-                <span className="text-base sm:text-lg" style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>Go to retop</span>
+                <span className="text-base sm:text-lg" style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>{installCtaCopy.ctaOpen}</span>
               </a>
             ) : (
               <a
@@ -55,7 +49,7 @@ export default function InstallCTASection({
               >
                 <Extension className="text-current text-2xl" />
                 <span className="mt-0.5">
-                  {isSupported ? "Install retop" : "Browser not supported"}
+                  {isSupported ? installCtaCopy.ctaInstall : installCtaCopy.ctaUnsupported}
                 </span>
               </a>
             )}
@@ -64,31 +58,31 @@ export default function InstallCTASection({
 
         {/* Right Column: Bento Grid Features */}
         <div className="grid grid-cols-1 md:grid-cols-6 gap-3 sm:gap-4 w-full">
-          <div className="md:col-span-4 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+          <div className="md:col-span-4 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
             <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
-              {checklist[0]}
+              {installCtaCopy.checklist[0]}
             </span>
           </div>
-          <div className="md:col-span-2 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+          <div className="md:col-span-2 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
             <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
-              {checklist[1]}
-            </span>
-          </div>
-
-          <div className="md:col-span-2 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
-            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
-              {checklist[2]}
-            </span>
-          </div>
-          <div className="md:col-span-4 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
-            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
-              {checklist[3]}
+              {installCtaCopy.checklist[1]}
             </span>
           </div>
 
-          <div className="md:col-span-6 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+          <div className="md:col-span-2 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
             <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
-              {checklist[4]}
+              {installCtaCopy.checklist[2]}
+            </span>
+          </div>
+          <div className="md:col-span-4 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
+              {installCtaCopy.checklist[3]}
+            </span>
+          </div>
+
+          <div className="md:col-span-6 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+            <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
+              {installCtaCopy.checklist[4]}
             </span>
           </div>
         </div>

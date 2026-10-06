@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { LegacyReturnButton } from "@/components/LegacyReturnButton";
 import { DashboardMockup } from "@/components/DashboardMockup";
+import { legacyCopy } from "@/content/copy";
 
 export default function LegacySection() {
   const [isPeeking, setIsPeeking] = useState(false);
@@ -12,10 +13,10 @@ export default function LegacySection() {
   return (
     <section className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 z-20 mx-auto text-center flex flex-col items-center gap-6">
       <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none ">
-        One click back to legacy
+        {legacyCopy.heading}
       </h2>
       <p className="text-(--text-muted) text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
-        We know change is hard. If you ever need to access the old VTOP for something we haven't ported yet, it's always just one click away right from the sidebar. No lock-in, just a better default.
+        {legacyCopy.description}
       </p>
       
       {/* 16:9 Demo Container */}

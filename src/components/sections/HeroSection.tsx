@@ -8,6 +8,7 @@ import { DashboardMockup } from "@/components/DashboardMockup";
 import { Extension, CloudOff, ArrowForward } from "@nine-thirty-five/material-symbols-react/rounded/700/filled";
 import { useBrowserDetection } from "@/hooks/useBrowserDetection";
 import { useExtensionDetection } from "@/hooks/useExtensionDetection";
+import { heroCopy } from "@/content/copy";
 
 gsap.registerPlugin(useGSAP);
 
@@ -104,7 +105,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
                 '"wdth" var(--wdth, 151), "wght" var(--wght, 800), "GRAD" 100, "ROND" 100, "slnt" -10',
             }}
           >
-            retop
+            {heroCopy.title}
           </h1>
         </div>
 
@@ -117,15 +118,13 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
                 '"wdth" var(--wdth, 151), "wght" var(--wght, 800), "GRAD" 100, "ROND" 0, "slnt" 0',
             }}
           >
-            VTOP without the fuss
+            {heroCopy.headline}
           </p>
           <p
             ref={subParaRef}
             className="opacity-0 text-base md:text-lg text-(--text-muted) max-w-xl leading-relaxed font-medium"
           >
-            A browser extension that sits on top of your VTOP with a stunning,
-            fast dashboard. No new account, no setup. Made for students, by
-            students.
+            {heroCopy.description}
           </p>
 
           <div
@@ -138,7 +137,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
                 id="hero-cta"
                 className="flex items-center justify-center bg-(--accent) text-(--on-accent) px-6 sm:px-8 py-3.5 rounded-full hover:opacity-90 transition-all duration-150 ease-out max-w-full text-center"
               >
-                <span className="text-base md:text-lg" style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>Go to retop</span>
+                <span className="text-base md:text-lg" style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>{heroCopy.ctaOpen}</span>
               </a>
             ) : (
               <a
@@ -152,7 +151,7 @@ export default function HeroSection({ chromeStoreUrl }: HeroSectionProps) {
               >
                 <Extension className="text-current text-2xl" />
                 <span className="mt-0.5">
-                  {isSupported ? "Install retop" : "Browser not supported"}
+                  {isSupported ? heroCopy.ctaInstall : heroCopy.ctaUnsupported}
                 </span>
               </a>
             )}

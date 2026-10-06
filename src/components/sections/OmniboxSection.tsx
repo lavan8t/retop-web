@@ -11,6 +11,7 @@ import {
   Search,
   KeyboardReturn,
 } from "@nine-thirty-five/material-symbols-react/rounded/700/filled";
+import { omniboxCopy } from "@/content/copy";
 
 const results = [
   {
@@ -49,43 +50,33 @@ export default function OmniboxSection() {
         {/* Text */}
         <div className="omnibox-heading flex flex-col gap-6">
           <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none ">
-            Press any key. Jump anywhere.
+            {omniboxCopy.heading}
           </h2>
           <p className="text-(--text-muted) text-base sm:text-lg leading-relaxed font-medium max-w-md">
-            Press{" "}
+            {omniboxCopy.descriptionPrefix}{" "}
             <kbd className="bg-(--bg-surface) border-2 border-(--accent) text-(--accent) px-2 py-0.5 rounded text-xs font-black">
-              Spacebar
+              {omniboxCopy.keyName}
             </kbd>{" "}
-            from anywhere in the portal. The omnibox opens
-            instantly a full-screen command palette over every module.
+            {omniboxCopy.descriptionSuffix}
           </p>
           <div className="flex flex-col gap-6 mt-2 pr-4">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase r text-sm">
-                Lightning Fast
-              </h3>
-              <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
-                No mouse needed. No more hunting through complex sidebars. You
-                can jump to any VTOP page instantly using just your keyboard.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase r text-sm">
-                University Spotlight
-              </h3>
-              <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
-                It feels just like macOS Spotlight or Raycast, completely
-                tailored for your academic life.
-              </p>
-            </div>
+            {omniboxCopy.items.map((item) => (
+              <div key={item.id} className="flex flex-col gap-2">
+                <h3 className="text-(--text-main) uppercase r text-sm">
+                  {item.title}
+                </h3>
+                <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Omnibox preview */}
-        <div className="omnibox-preview bg-(--bg-surface) border-[3px] border-(--bg-surface) rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
+        <div className="omnibox-preview bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
           {/* Search input */}
-          <div className="flex items-center gap-3 bg-(--bg-card) border-2 border-(--accent)/40 rounded-xl px-4 py-3">
+          <div className="flex items-center gap-3 bg-white/[0.05] border-2 border-(--accent)/40 rounded-xl px-4 py-3">
             <Search className="text-(--text-muted) w-5 h-5" />
             <span className="text-(--text-main) text-sm">
               timetable

@@ -2,6 +2,7 @@
 
 import { Check } from "@nine-thirty-five/material-symbols-react/rounded/700/filled";
 import { CloudOff } from "@nine-thirty-five/material-symbols-react/rounded/700/filled";
+import { offlineCopy } from "@/content/copy";
 
 export default function OfflineSection() {
   return (
@@ -13,37 +14,26 @@ export default function OfflineSection() {
         <div className="offline-text flex flex-col gap-6">
           <CloudOff className="text-(--accent) text-5xl drop-shadow-md" />
           <h2 className="font-title-base text-3xl sm:text-4xl md:text-5xl text-(--text-main) leading-none ">
-            Even when WiFi gives up, retop doesn&apos;t.
+            {offlineCopy.heading}
           </h2>
           <div className="flex flex-col gap-6 mt-2 pr-4">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase r text-sm">
-                Instant Access
-              </h3>
-              <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
-                Your timetable, attendance, and marks are cached securely on
-                your local device. The dashboard loads instantly on repeat
-                visits without a single loading spinner.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <h3 className="text-(--text-main) uppercase r text-sm">
-                Background Sync
-              </h3>
-              <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
-                The cache refreshes seamlessly in the background to ensure you
-                always have the latest data. It's heavily optimized and works
-                flawlessly even on slow 2G campus networks.
-              </p>
-            </div>
+            {offlineCopy.items.map((item) => (
+              <div key={item.id} className="flex flex-col gap-2">
+                <h3 className="text-(--text-main) uppercase r text-sm">
+                  {item.title}
+                </h3>
+                <p className="text-(--text-main) opacity-90 text-sm font-medium leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Visual split panel */}
-        <div className="offline-visual grid grid-cols-2 gap-0 rounded-2xl border-[3px] border-(--bg-surface) overflow-hidden">
+        <div className="offline-visual grid grid-cols-2 gap-0 rounded-2xl border border-white/10 overflow-hidden backdrop-blur-md">
           {/* Old VTOP side */}
-          <div className="bg-(--bg-card) p-6 flex flex-col gap-4 items-center justify-center border-r-[3px] border-(--border-subtle)">
+          <div className="bg-white/[0.04] p-6 flex flex-col gap-4 items-center justify-center border-r border-white/10">
             <div className="flex flex-col items-center gap-3">
               <div className="w-10 h-10 rounded-full border-2 border-(--text-muted) opacity-30 border-t-(--text-muted) animate-spin" />
               <p className="text-center text-xs text-(--text-muted) leading-relaxed">
@@ -58,13 +48,13 @@ export default function OfflineSection() {
           </div>
 
           {/* retop side */}
-          <div className="bg-(--bg-surface) p-6 flex flex-col gap-4 items-center justify-center">
+          <div className="bg-white/[0.02] p-6 flex flex-col gap-4 items-center justify-center">
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col gap-1.5 w-full">
                 {["Timetable", "Attendance", "Marks"].map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-2 bg-(--bg-card) border border-[color-mix(in_srgb,var(--accent)_30%,transparent)] rounded-lg px-3 py-2"
+                    className="flex items-center gap-2 bg-white/[0.05] border border-[color-mix(in_srgb,var(--accent)_30%,transparent)] rounded-lg px-3 py-2"
                   >
                     <Check className="text-(--accent) w-4 h-4" />
                     <span className="text-xs text-(--text-muted) font-medium">

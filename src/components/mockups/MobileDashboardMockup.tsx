@@ -168,11 +168,12 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
 
         {/* 5. Month & Semester Header + Filter Chips */}
         <div className="pt-1.5 space-y-2.5">
-          <div className="flex flex-col">
-            <h2 className="text-lg sm:text-xl font-black text-(--text-main) uppercase leading-none">
-              OCTOBER 2026
+          <div className="flex items-baseline gap-2">
+            <h2 className="text-lg sm:text-xl font-black text-(--text-main) leading-none">
+              October 2026
             </h2>
-            <p className="text-[11px] font-bold text-(--text-muted) mt-1">
+            <span className="text-xs font-bold text-(--text-muted)">•</span>
+            <p className="text-xs font-semibold text-(--text-muted)">
               Fall Semester 2026-27
             </p>
           </div>

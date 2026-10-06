@@ -10,6 +10,7 @@ import {
 } from "@nine-thirty-five/material-symbols-react/rounded/700/filled";
 import { useBrowserDetection } from "@/hooks/useBrowserDetection";
 import { useExtensionDetection } from "@/hooks/useExtensionDetection";
+import { navbarCopy } from "@/content/copy";
 
 gsap.registerPlugin(useGSAP);
 
@@ -51,7 +52,7 @@ export default function Navbar({
           href="https://github.com/vtop-retop"
           target="_blank"
           rel="noreferrer"
-          aria-label="GitHub repository"
+          aria-label={navbarCopy.githubAria}
           className="text-(--text-main) hover:text-(--accent) transition-colors duration-150 p-1.5 flex items-center justify-center rounded-full"
         >
           <svg
@@ -71,7 +72,7 @@ export default function Navbar({
             href="/u/0/home"
             className="flex items-center bg-(--accent) text-(--on-accent) px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full hover:opacity-90 transition-all duration-150 ease-out text-xs sm:text-sm"
           >
-            <span style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>Go to retop</span>
+            <span style={{ fontVariationSettings: '"wdth" 125, "wght" 900, "slnt" -10, "ROND" 100' }}>{navbarCopy.openApp}</span>
           </a>
         ) : (
           <a
@@ -85,7 +86,7 @@ export default function Navbar({
           >
             <Extension className="text-current w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
             <span className="mt-0.5 whitespace-nowrap">
-              {isSupported ? "Install retop" : "Not supported"}
+              {isSupported ? navbarCopy.installExtension : navbarCopy.unsupportedBrowser}
             </span>
           </a>
         )}

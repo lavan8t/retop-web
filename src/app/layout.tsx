@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
+import { siteMeta } from "@/content/copy";
 
 export const metadata: Metadata = {
-  title: "retop",
-  description:
-    "retop is a browser extension and web suite for VIT University students. Fast, offline-first dashboard.",
+  title: siteMeta.title,
+  description: siteMeta.description,
   alternates: {
     canonical: "https://getretop.web.app",
   },
   openGraph: {
-    title: "retop",
-    description:
-      "Transform your VTOP portal into a stunning, fast dashboard.",
+    title: siteMeta.title,
+    description: siteMeta.description,
     url: "https://getretop.web.app",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "retop",
-    description:
-      "Transform your VTOP portal into a stunning, fast dashboard.",
+    title: siteMeta.title,
+    description: siteMeta.description,
   },
 };
 

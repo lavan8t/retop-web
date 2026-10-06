@@ -10,12 +10,13 @@ import OmniboxSection from "@/components/sections/OmniboxSection";
 import SocialSection from "@/components/sections/SocialSection";
 import InstallCTASection from "@/components/sections/InstallCTASection";
 import Footer from "@/components/Footer";
+import { siteMeta } from "@/content/copy";
 
 const CHROME_STORE_URL =
   "https://chromewebstore.google.com/detail/retop/algmeibfbkahhjjgfkiifdnfcoomiigc?pli=1";
 
 export const metadata: Metadata = {
-  title: "Home - retop",
+  title: siteMeta.title,
 };
 
 export default function RetopHome() {

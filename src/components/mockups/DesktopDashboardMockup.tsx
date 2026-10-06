@@ -51,8 +51,6 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
           </div>
         </div>
 
-
-
         {/* Right: Actions & User Avatar */}
         <div className="flex items-center gap-2 shrink-0">
           <div
@@ -68,7 +66,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
             <Refresh style={{ width: 17, height: 17 }} />
           </div>
           <div className="shrink-0 ml-1">
-            <div className="w-8 h-8 rounded-full bg-(--accent)/20 border border-(--accent)/35 flex items-center justify-center text-(--accent) shadow-xs">
+            <div className="w-8 h-8 rounded-full bg-(--accent)/20 flex items-center justify-center text-(--accent) shadow-xs">
               <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
                 <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3.3 0-8 1.7-8 5v1h16v-1c0-3.3-4.7-5-8-5Z" />
               </svg>
@@ -138,14 +136,16 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                 Academics
               </span>
               <div className="flex flex-wrap gap-1">
-                {["Grade View", "Digital Assignments", "Exam Schedule"].map((item) => (
-                  <span
-                    key={item}
-                    className="px-2 py-1 rounded-lg text-[10px] font-medium bg-white/[0.04] text-(--text-main)"
-                  >
-                    {item}
-                  </span>
-                ))}
+                {["Grade View", "Digital Assignments", "Exam Schedule"].map(
+                  (item) => (
+                    <span
+                      key={item}
+                      className="px-2 py-1 rounded-lg text-[10px] font-medium bg-white/[0.04] text-(--text-main)"
+                    >
+                      {item}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
 
@@ -178,39 +178,25 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
 
         {/* ── CENTER PANE (50% / col-span-6) ── */}
         <div className="col-span-12 md:col-span-8 xl:col-span-6 flex flex-col gap-3 min-w-0">
-          {/* Month Header Card with Semester & Progress */}
+          {/* Month Header Card with Semester */}
           <div className="rounded-2xl bg-(--bg-card) border border-(--border-subtle) p-4 flex flex-col gap-2.5 shadow-sm">
-            <div className="flex items-center justify-between">
-              <div>
-                <h2 className="text-base sm:text-lg font-black text-(--text-main) uppercase leading-none">
-                  October 2026
-                </h2>
-                <p className="text-[11px] font-bold text-(--text-muted) mt-1">
-                  Fall Semester 2026-27
-                </p>
-              </div>
-              <div className="flex flex-col items-end">
-                <span className="text-[10px] font-black uppercase text-(--accent)">
-                  68% Completed
-                </span>
-                <span className="text-[10px] font-medium text-(--text-muted)">
-                  42 days remaining
-                </span>
-              </div>
-            </div>
-
-            {/* Progress bar */}
-            <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden mt-0.5">
-              <div className="h-full bg-(--accent) rounded-full w-[68%]" />
+            <div className="flex items-center gap-2.5">
+              <h2 className="text-base sm:text-lg font-black text-(--text-main) leading-none">
+                October 2026
+              </h2>
+              <span className="text-xs font-bold text-(--text-muted)">•</span>
+              <p className="text-xs font-semibold text-(--text-muted)">
+                Fall Semester 2026-27
+              </p>
             </div>
 
             {/* Filter Chips */}
             <div className="flex items-center gap-1.5 pt-1 overflow-x-auto no-scrollbar">
               {[
                 { id: "all", label: "All" },
-                { id: "classes", label: "Classes (3)" },
-                { id: "exams", label: "Exams (1)" },
-                { id: "assignments", label: "DAs (2)" },
+                { id: "classes", label: "Classes" },
+                { id: "exams", label: "Exams" },
+                { id: "assignments", label: "Assessments" },
               ].map((chip) => {
                 const isActive = activeFilter === chip.id;
                 return (
@@ -265,7 +251,9 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                     </div>
                     <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
                       <span>08:00 AM - 08:50 AM</span>
-                      <span className="font-semibold text-(--text-main)">SJT 401</span>
+                      <span className="font-semibold text-(--text-main)">
+                        SJT 401
+                      </span>
                     </div>
                   </div>
 
@@ -281,7 +269,9 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                     </div>
                     <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
                       <span>09:00 AM - 09:50 AM</span>
-                      <span className="font-semibold text-(--text-main)">TT 214</span>
+                      <span className="font-semibold text-(--text-main)">
+                        TT 214
+                      </span>
                     </div>
                   </div>
 
@@ -297,7 +287,9 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                     </div>
                     <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
                       <span>11:00 AM - 11:50 AM</span>
-                      <span className="font-semibold text-(--text-main)">SJT 305</span>
+                      <span className="font-semibold text-(--text-main)">
+                        SJT 305
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -454,14 +446,18 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
 
   if (!showDeviceFrame) {
     return (
-      <div className={`w-full h-full bg-(--bg-surface) pointer-events-none select-none ${className}`}>
+      <div
+        className={`w-full h-full bg-(--bg-surface) pointer-events-none select-none ${className}`}
+      >
         {content}
       </div>
     );
   }
 
   return (
-    <div className={`relative w-full max-w-6xl mx-auto pointer-events-none select-none ${className}`}>
+    <div
+      className={`relative w-full max-w-6xl mx-auto pointer-events-none select-none ${className}`}
+    >
       {/* Ambient background glow */}
       <div
         className="absolute -inset-2 sm:-inset-4 bg-(--accent)/15 rounded-3xl sm:rounded-[36px] blur-2xl -z-10 pointer-events-none opacity-45 dark:opacity-35"
