@@ -10,6 +10,40 @@ let currentSourceHex = "#d95a00";
 let currentMode: ThemeMode = "dark";
 
 /**
+ * Updates the <meta name="theme-color"> on Android to match the bottommost
+ * color of the background in the gradient (--retop-gradient-end).
+ */
+export function updateAndroidThemeColor() {
+  if (typeof window === "undefined" || typeof document === "undefined") return;
+  if (!/Android/i.test(navigator.userAgent)) return;
+
+  const update = () => {
+    const probe = document.createElement("div");
+    probe.style.cssText =
+      "position:fixed;visibility:hidden;pointer-events:none;background-color:var(--retop-gradient-end);";
+    document.documentElement.appendChild(probe);
+    const computedColor = getComputedStyle(probe).backgroundColor;
+    document.documentElement.removeChild(probe);
+
+    if (computedColor) {
+      let meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute("name", "theme-color");
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute("content", computedColor);
+    }
+  };
+
+  if (typeof requestAnimationFrame !== "undefined") {
+    requestAnimationFrame(update);
+  } else {
+    update();
+  }
+}
+
+/**
  * Applies a Material Design 3 theme based on a hex source color and mode.
  */
 export function applyMaterialTheme(
@@ -45,6 +79,9 @@ export function applyMaterialTheme(
     root.style.setProperty("--md-sys-color-surface-container-highest", "#141414");
     root.style.setProperty("--md-sys-color-surface-container-low", "#050505");
   }
+
+  // Update Android theme color to match the bottommost gradient background color
+  updateAndroidThemeColor();
 }
 
 export function getCurrentSourceHex() {

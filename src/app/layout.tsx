@@ -56,6 +56,12 @@ export default function RootLayout({
           href="/favicon-dark.ico"
           media="(prefers-color-scheme: dark)"
         />
+        {/* Android Theme Color Sync with bottommost gradient background color */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(typeof navigator!=="undefined"&&/Android/i.test(navigator.userAgent)){var m=document.querySelector('meta[name="theme-color"]');if(!m){m=document.createElement('meta');m.name='theme-color';document.head.appendChild(m);}var p=document.createElement('div');p.style.cssText='position:fixed;visibility:hidden;pointer-events:none;background-color:var(--retop-gradient-end);';document.documentElement.appendChild(p);var c=getComputedStyle(p).backgroundColor;document.documentElement.removeChild(p);if(c){m.content=c;}}})();`,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `if(typeof window!=="undefined"){window.litIssuedWarnings=new Set(["dev-mode"]);}`,

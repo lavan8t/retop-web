@@ -4,8 +4,8 @@
   "description": "Modern, ultra-fast, offline-capable interface for VTOP",
   "start_url": "/u/0/home",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "background_color": "#482207",
+  "theme_color": "#482207",
   "orientation": "any",
   "icons": [
     {
