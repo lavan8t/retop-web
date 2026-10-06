@@ -31,9 +31,9 @@ export default function OfflineSection() {
         </div>
 
         {/* Visual split panel */}
-        <div className="offline-visual grid grid-cols-2 gap-0 rounded-2xl border border-white/10 overflow-hidden backdrop-blur-md">
+        <div className="offline-visual grid grid-cols-2 gap-0 rounded-2xl border-[3px] border-(--bg-surface) overflow-hidden">
           {/* Old VTOP side */}
-          <div className="bg-white/[0.04] p-6 flex flex-col gap-4 items-center justify-center border-r border-white/10">
+          <div className="bg-(--bg-card) p-6 flex flex-col gap-4 items-center justify-center border-r-[3px] border-(--border-subtle)">
             <div className="flex flex-col items-center gap-3">
               <div className="w-10 h-10 rounded-full border-2 border-(--text-muted) opacity-30 border-t-(--text-muted) animate-spin" />
               <p className="text-center text-xs text-(--text-muted) leading-relaxed">
@@ -48,13 +48,13 @@ export default function OfflineSection() {
           </div>
 
           {/* retop side */}
-          <div className="bg-white/[0.02] p-6 flex flex-col gap-4 items-center justify-center">
+          <div className="bg-(--bg-surface) p-6 flex flex-col gap-4 items-center justify-center">
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col gap-1.5 w-full">
                 {["Timetable", "Attendance", "Marks"].map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-2 bg-white/[0.05] border border-[color-mix(in_srgb,var(--accent)_30%,transparent)] rounded-lg px-3 py-2"
+                    className="flex items-center gap-2 bg-(--bg-card) border border-[color-mix(in_srgb,var(--accent)_30%,transparent)] rounded-lg px-3 py-2"
                   >
                     <Check className="text-(--accent) w-4 h-4" />
                     <span className="text-xs text-(--text-muted) font-medium">

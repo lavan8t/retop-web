@@ -58,29 +58,29 @@ export default function InstallCTASection({
 
         {/* Right Column: Bento Grid Features */}
         <div className="grid grid-cols-1 md:grid-cols-6 gap-3 sm:gap-4 w-full">
-          <div className="md:col-span-4 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+          <div className="md:col-span-4 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
             <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {installCtaCopy.checklist[0]}
             </span>
           </div>
-          <div className="md:col-span-2 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+          <div className="md:col-span-2 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
             <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {installCtaCopy.checklist[1]}
             </span>
           </div>
 
-          <div className="md:col-span-2 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+          <div className="md:col-span-2 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
             <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {installCtaCopy.checklist[2]}
             </span>
           </div>
-          <div className="md:col-span-4 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+          <div className="md:col-span-4 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
             <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {installCtaCopy.checklist[3]}
             </span>
           </div>
 
-          <div className="md:col-span-6 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
+          <div className="md:col-span-6 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-6 rounded-3xl sm:rounded-4xl flex items-center justify-center min-h-24 sm:min-h-30">
             <span className="text-base sm:text-lg md:text-xl text-(--text-main) text-center">
               {installCtaCopy.checklist[4]}
             </span>

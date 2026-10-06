@@ -176,7 +176,7 @@ export const omniboxCopy = {
 export const socialCopy = {
   heading: "Built by a VIT student who got tired of VTOP.",
   description:
-    "I built retop because clicking through 2010s menus to check whether I had an 8 AM class was driving me nuts. The project is open source on GitHub with zero telemetry or tracking.",
+    "I built retop because clicking through 2010s menus to check whether I had an 8 AM class was driving me nuts. Built with zero telemetry or tracking.",
   quote:
     "I forgot how painful VTOP was until I had to log in on a lab desktop.",
   quoteAuthor: "VIT Student",
@@ -185,7 +185,7 @@ export const socialCopy = {
 
 export const installCtaCopy = {
   headingLine1: "Fix your VTOP today.",
-  headingLine2: "Free and open source.",
+  headingLine2: "Built for speed.",
   ctaInstall: "Install retop",
   ctaOpen: "Go to retop",
   ctaUnsupported: "Browser unsupported",
@@ -202,7 +202,7 @@ export const footerCopy = {
   brand: "retop",
   tagline: "A modern frontend for VTOP.",
   disclaimer:
-    "retop is an open source community project, not affiliated with or endorsed by Vellore Institute of Technology. VTOP is a trademark of Vellore Institute of Technology.",
+    "retop is an independent community project, not affiliated with or endorsed by Vellore Institute of Technology. VTOP is a trademark of Vellore Institute of Technology.",
   legalHeading: "Legal",
   privacyLink: "Privacy policy",
   termsLink: "Terms of use",
@@ -245,13 +245,13 @@ export const termsCopy = {
     {
       title: "Definitions",
       items: [
-        "retop: The open source browser extension and mobile application.",
+        "retop: The browser extension and mobile application.",
         "Website: The getretop.web.app domain hosting this documentation.",
       ],
     },
     {
-      title: "Open source license",
-      body: "retop is open source software published under its repository license. You may inspect, fork, and build the code yourself on GitHub.",
+      title: "Software license",
+      body: "retop is software published under its repository license. You may inspect, fork, and build the code yourself.",
     },
     {
       title: "Disclaimer of warranty",

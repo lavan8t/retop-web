@@ -18,7 +18,7 @@ export default function SocialSection() {
         </div>
 
         {/* Testimonial */}
-        <div className="bg-white/[0.04] backdrop-blur-md border border-white/10 rounded-2xl p-5 sm:p-8 md:p-10 max-w-2xl text-left w-full flex flex-col gap-6 sm:gap-8 shadow-sm">
+        <div className="bg-(--bg-card) border border-(--border-subtle) rounded-2xl p-5 sm:p-8 md:p-10 max-w-2xl text-left w-full flex flex-col gap-6 sm:gap-8 shadow-sm">
           <p className="text-(--text-main) text-lg sm:text-xl md:text-2xl font-medium leading-relaxed ">
             &ldquo;{socialCopy.quote}&rdquo;
           </p>

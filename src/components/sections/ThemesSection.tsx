@@ -47,7 +47,7 @@ export default function ThemesSection() {
 
       <div className="flex justify-center max-w-2xl mx-auto w-full">
         {/* Appearance Card */}
-        <div className="appearance-box flex flex-col gap-6 bg-white/[0.04] backdrop-blur-md border border-white/10 p-4 sm:p-7 rounded-3xl w-full">
+        <div className="appearance-box flex flex-col gap-6 bg-(--bg-card) border border-(--border-subtle) p-4 sm:p-7 rounded-3xl w-full">
           <h3 className="text-xs font-bold text-(--text-muted) uppercase st">
             {themesCopy.appearanceLabel}
           </h3>

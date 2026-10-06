@@ -56,7 +56,7 @@ export default function CalendarSection() {
     <section className="relative w-full max-w-6xl px-4 sm:px-6 md:px-12 py-16 md:py-32 z-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
         {/* Academic Calendar Mockup matching retop-ext */}
-        <div className="calendar-card bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-3 sm:p-5 flex flex-col gap-3 shadow-sm pointer-events-none select-none">
+        <div className="calendar-card bg-(--bg-card) border border-(--border-subtle) rounded-2xl p-3 sm:p-5 flex flex-col gap-3 shadow-sm pointer-events-none select-none">
           {/* Top Bar: Month, Semester, and View Controls */}
           <div className="flex flex-wrap items-center justify-between gap-2.5 pb-1">
             <div className="flex items-baseline gap-2">
@@ -71,7 +71,7 @@ export default function CalendarSection() {
 
             {/* Controls matching retop-ext */}
             <div className="flex items-center gap-1.5">
-              <div className="flex items-center gap-0.5 bg-white/[0.04] rounded-lg p-0.5 border border-white/10">
+              <div className="flex items-center gap-0.5 bg-(--bg-surface) rounded-lg p-0.5 border border-(--border-subtle)">
                 <div className="w-6 h-6 flex items-center justify-center rounded text-(--text-muted)">
                   <ChevronLeft className="w-3.5 h-3.5" />
                 </div>
@@ -79,7 +79,7 @@ export default function CalendarSection() {
                   <ChevronRight className="w-3.5 h-3.5" />
                 </div>
               </div>
-              <div className="flex items-center bg-white/[0.04] rounded-lg p-0.5 border border-white/10">
+              <div className="flex items-center bg-(--bg-surface) rounded-lg p-0.5 border border-(--border-subtle)">
                 <div className="px-2 py-1 rounded bg-(--accent) text-(--on-accent) flex items-center gap-1 text-[11px] font-bold">
                   <GridView className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">Grid</span>
@@ -106,7 +106,7 @@ export default function CalendarSection() {
               <span className="w-1.5 h-1.5 rounded-full bg-purple-500 inline-block" />
               Event
             </span>
-            <span className="flex items-center gap-1.5 text-(--text-muted) bg-white/[0.04] px-2 py-0.5 rounded-full text-[10px] font-bold">
+            <span className="flex items-center gap-1.5 text-(--text-muted) bg-(--bg-surface) px-2 py-0.5 rounded-full text-[10px] font-bold">
               <span className="w-1.5 h-1.5 rounded-full bg-(--accent) inline-block" />
               Instructional
             </span>
@@ -139,11 +139,11 @@ export default function CalendarSection() {
               const isExam = item.type === "exam";
               const isEvent = item.type === "event";
 
-              let containerClass = "bg-white/[0.02] border border-white/10";
+              let containerClass = "bg-(--bg-surface) border border-(--border-subtle)";
               let numClass = "text-(--text-main) font-bold";
 
               if (isToday) {
-                containerClass = "bg-white/[0.08] ring-2 ring-(--accent) shadow-xs";
+                containerClass = "bg-(--bg-card) ring-2 ring-(--accent) shadow-xs";
               } else if (isHoliday) {
                 containerClass = "bg-red-500/15 border border-red-500/25";
                 numClass = "text-red-400 font-black";

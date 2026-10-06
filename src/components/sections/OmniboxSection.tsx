@@ -74,9 +74,9 @@ export default function OmniboxSection() {
         </div>
 
         {/* Omnibox preview */}
-        <div className="omnibox-preview bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
+        <div className="omnibox-preview bg-(--bg-surface) border-[3px] border-(--bg-surface) rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
           {/* Search input */}
-          <div className="flex items-center gap-3 bg-white/[0.05] border-2 border-(--accent)/40 rounded-xl px-4 py-3">
+          <div className="flex items-center gap-3 bg-(--bg-card) border-2 border-(--accent)/40 rounded-xl px-4 py-3">
             <Search className="text-(--text-muted) w-5 h-5" />
             <span className="text-(--text-main) text-sm">
               timetable
