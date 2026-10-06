@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect } from "react";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import DashboardSection from "@/components/sections/DashboardSection";
@@ -16,11 +14,11 @@ import Footer from "@/components/Footer";
 const CHROME_STORE_URL =
   "https://chrome.google.com/webstore/detail/your-extension-id";
 
-export default function RetopHome() {
-  useEffect(() => {
-    document.title = "Home - retop";
-  }, []);
+export const metadata: Metadata = {
+  title: "Home - retop",
+};
 
+export default function RetopHome() {
   return (
     <main id="main-content" className="relative w-full flex flex-col items-center">
       <div
