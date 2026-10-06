@@ -141,7 +141,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                   Digital Assignment 1
                 </span>
                 <span className="text-[10px] font-medium text-(--text-muted)">
-                  BCSE302L
+                  BCSE302L • Art. Intel.
                 </span>
               </div>
               <span className="shrink-0 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/15 text-rose-300 dark:text-rose-200">
@@ -156,7 +156,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                   Project Review II
                 </span>
                 <span className="text-[10px] font-medium text-(--text-muted)">
-                  BCSE301L
+                  BCSE301L • Soft. Engg.
                 </span>
               </div>
               <span className="shrink-0 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-(--accent)/15 text-(--accent)">
@@ -223,7 +223,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                 {/* Class 1 */}
                 <div className="rounded-t-[18px] rounded-b-[4px] bg-(--accent)/10 dark:bg-(--accent)/15 p-3 sm:p-3.5 flex flex-col gap-1">
                   <span className="text-xs sm:text-sm font-bold text-(--text-main) truncate leading-tight">
-                    Artificial Intelligence
+                    Art. Intel.
                   </span>
                   <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
                     <span>08:00 AM - 08:50 AM</span>
@@ -234,7 +234,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                 {/* Class 2 */}
                 <div className="rounded-t-[4px] rounded-b-[18px] bg-(--accent)/10 dark:bg-(--accent)/15 p-3 sm:p-3.5 flex flex-col gap-1">
                   <span className="text-xs sm:text-sm font-bold text-(--text-main) truncate leading-tight">
-                    Computer Networks
+                    Comp. Net.
                   </span>
                   <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
                     <span>09:00 AM - 09:50 AM</span>
@@ -274,7 +274,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                     </div>
 
                     <span className="text-xs sm:text-sm font-bold text-white truncate leading-tight">
-                      Software Engineering
+                      Soft. Engg.
                     </span>
 
                     <div className="flex items-center gap-2 text-[11px] text-purple-300">

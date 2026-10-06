@@ -27,11 +27,11 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
   const showAssignments = true;
 
   const attendanceCourses = [
-    { code: "AI", name: "Artificial Intelligence", pct: 92, safe: true },
-    { code: "CN", name: "Computer Networks", pct: 85, safe: true },
-    { code: "OS", name: "Operating Systems", pct: 88, safe: true },
-    { code: "DBMS", name: "Database Management", pct: 75, safe: false },
-    { code: "SE", name: "Software Engineering", pct: 95, safe: true },
+    { name: "Art. Intel.", pct: 92, safe: true },
+    { name: "Comp. Net.", pct: 85, safe: true },
+    { name: "Operating Sys.", pct: 88, safe: true },
+    { name: "Database Mgmt.", pct: 75, safe: false },
+    { name: "Soft. Engg.", pct: 95, safe: true },
   ];
 
   const content = (
@@ -101,7 +101,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
             <div className="flex flex-col gap-1.5">
               {attendanceCourses.map((c) => (
                 <div
-                  key={c.code}
+                  key={c.name}
                   className="relative flex items-center justify-between px-3 py-2.5 rounded-xl bg-white/[0.03] dark:bg-white/[0.02] overflow-hidden select-none"
                 >
                   <div
@@ -111,7 +111,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                     style={{ width: `${c.pct}%` }}
                   />
                   <span className="relative z-10 text-xs font-bold text-(--text-main)">
-                    {c.code}
+                    {c.name}
                   </span>
                   <span
                     className={`relative z-10 text-xs font-black ${
@@ -257,7 +257,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                   <div className="rounded-t-[16px] rounded-b-[4px] bg-(--accent)/10 dark:bg-(--accent)/15 p-3 flex flex-col gap-1">
                     <div className="flex items-center justify-between">
                       <span className="text-xs sm:text-sm font-bold text-(--text-main) truncate leading-tight">
-                        Artificial Intelligence
+                        Art. Intel.
                       </span>
                       <span className="text-[10px] font-sans font-medium text-(--text-muted)">
                         BCSE302L
@@ -273,7 +273,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                   <div className="rounded-[4px] bg-(--accent)/10 dark:bg-(--accent)/15 p-3 flex flex-col gap-1">
                     <div className="flex items-center justify-between">
                       <span className="text-xs sm:text-sm font-bold text-(--text-main) truncate leading-tight">
-                        Computer Networks
+                        Comp. Net.
                       </span>
                       <span className="text-[10px] font-sans font-medium text-(--text-muted)">
                         BCSE303L
@@ -289,7 +289,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                   <div className="rounded-t-[4px] rounded-b-[16px] bg-(--accent)/10 dark:bg-(--accent)/15 p-3 flex flex-col gap-1">
                     <div className="flex items-center justify-between">
                       <span className="text-xs sm:text-sm font-bold text-(--text-main) truncate leading-tight">
-                        Operating Systems
+                        Operating Sys.
                       </span>
                       <span className="text-[10px] font-sans font-medium text-(--text-muted)">
                         BCSE205L
@@ -339,7 +339,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                       </div>
 
                       <span className="text-xs sm:text-sm font-bold text-white truncate leading-tight">
-                        Software Engineering
+                        Soft. Engg.
                       </span>
 
                       <div className="flex items-center gap-2 text-[11px] text-purple-300">
@@ -423,7 +423,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                     Digital Assignment 1
                   </span>
                   <span className="text-[10px] font-medium text-(--text-muted)">
-                    BCSE302L • AI
+                    BCSE302L • Art. Intel.
                   </span>
                 </div>
                 <span className="shrink-0 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/15 text-rose-300 dark:text-rose-200">
@@ -438,7 +438,7 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
                     Project Review II
                   </span>
                   <span className="text-[10px] font-medium text-(--text-muted)">
-                    BCSE301L • SE
+                    BCSE301L • Soft. Engg.
                   </span>
                 </div>
                 <span className="shrink-0 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-(--accent)/15 text-(--accent)">

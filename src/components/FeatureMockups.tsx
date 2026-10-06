@@ -71,92 +71,347 @@ function AuthenticDigitalIDCard() {
    ═══════════════════════════════════════════════════════════════════════════ */
 function DesktopTimetableCard() {
   return (
-    <div className="w-full rounded-3xl border border-(--border-subtle) bg-(--bg-card) p-5 sm:p-6 shadow-lg pointer-events-none select-none">
-      <div className="w-full grid grid-cols-6 gap-1.5 text-xs overflow-x-auto">
-        <div className="p-2 font-bold text-(--text-muted) bg-white/5 rounded-xl text-center text-[10px]">
-          TIME
+    <div className="w-full rounded-3xl border border-(--border-subtle) bg-(--bg-card) p-4 sm:p-5 shadow-lg pointer-events-none select-none flex flex-col gap-3">
+      {/* Semester Subheading */}
+      <div className="flex items-center justify-between pb-0.5">
+        <div className="flex items-center gap-2">
+          <span className="text-xs sm:text-sm font-black text-(--text-main)">
+            Winter Semester 2026-27
+          </span>
+          <span className="px-2 py-0.5 rounded-full text-[9px] font-bold bg-emerald-500/15 text-emerald-400">
+            Active
+          </span>
         </div>
-        {["MON", "TUE", "WED", "THU", "FRI"].map((d) => (
-          <div
-            key={d}
-            className={`p-2 font-bold rounded-xl text-center text-[10px] ${
-              d === "TUE"
-                ? "bg-(--accent) text-(--on-accent)"
-                : "bg-white/5 text-(--text-main)"
-            }`}
-          >
-            {d}
+        <span className="text-[10px] font-bold text-(--text-muted) uppercase">
+          Theory & Lab Matrix
+        </span>
+      </div>
+
+      {/* Grid view */}
+      <div className="w-full overflow-x-auto custom-scrollbar">
+        <div className="min-w-[580px] grid grid-cols-[40px_repeat(4,minmax(78px,1fr))_24px_repeat(2,minmax(78px,1fr))] gap-1.5 text-xs">
+          {/* Header Row */}
+          <div className="p-1.5 font-black text-(--text-muted) text-center text-[10px] flex items-center justify-center">
+            DAY
           </div>
-        ))}
+          <div className="p-1.5 font-bold text-(--text-muted) text-center text-[10px]">
+            08:00
+          </div>
+          <div className="p-1.5 font-bold text-(--text-muted) text-center text-[10px]">
+            09:00
+          </div>
+          <div className="p-1.5 font-bold text-(--text-muted) text-center text-[10px]">
+            10:00
+          </div>
+          <div className="p-1.5 font-bold text-(--text-muted) text-center text-[10px]">
+            11:00
+          </div>
+          <div className="p-1.5 font-bold text-(--text-muted) text-center text-[9px]">
+            {/* Lunch spacer */}
+          </div>
+          <div className="p-1.5 font-bold text-(--text-muted) text-center text-[10px]">
+            14:00
+          </div>
+          <div className="p-1.5 font-bold text-(--text-muted) text-center text-[10px]">
+            15:00
+          </div>
 
-        {/* Slot Row 1: 08:00 - 08:50 */}
-        <div className="p-2 text-[9px] font-sans font-medium text-(--text-muted) bg-white/[0.02] rounded-xl text-center my-auto">
-          08:00
-        </div>
-        <div className="p-2 rounded-xl bg-(--accent)/15 text-center">
-          <span className="font-bold text-(--accent) block text-[10px]">BCSE301L</span>
-          <span className="text-[8px] text-(--text-muted)">SJT 401</span>
-        </div>
-        <div className="p-2 rounded-xl bg-(--accent)/25 text-center">
-          <span className="font-bold text-(--accent) block text-[10px]">BCSE301L [NOW]</span>
-          <span className="text-[8px] text-(--text-muted)">SJT 401</span>
-        </div>
-        <div className="p-2 rounded-xl bg-white/[0.03] text-center">
-          <span className="font-bold text-(--text-muted) block text-[10px]">-</span>
-        </div>
-        <div className="p-2 rounded-xl bg-(--accent)/15 text-center">
-          <span className="font-bold text-(--accent) block text-[10px]">BCSE301L</span>
-          <span className="text-[8px] text-(--text-muted)">SJT 401</span>
-        </div>
-        <div className="p-2 rounded-xl bg-white/[0.03] text-center">
-          <span className="font-bold text-(--text-muted) block text-[10px]">-</span>
-        </div>
+          {/* MON Row */}
+          <div className="p-1.5 font-black text-(--text-muted) rounded-xl text-center text-[10px] flex items-center justify-center bg-white/[0.02]">
+            MON
+          </div>
+          {/* Mon 08:00: Soft. Engg. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Soft. Engg.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">A1</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 401</span>
+            </div>
+          </div>
+          {/* Mon 09:00: Empty F1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">F1</span>
+          </div>
+          {/* Mon 10:00: Operating Sys. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Operating Sys.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">D1</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 112</span>
+            </div>
+          </div>
+          {/* Mon 11:00: Empty TB1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">TB1</span>
+          </div>
+          {/* LUNCH: spans 5 rows in column 6 */}
+          <div
+            className="row-span-5 flex items-center justify-center bg-white/[0.02] dark:bg-white/[0.02] rounded-xl overflow-hidden py-2"
+          >
+            <span
+              className="text-[9px] font-black text-(--text-muted) uppercase opacity-50 whitespace-nowrap"
+              style={{
+                writingMode: "vertical-rl",
+                transform: "rotate(180deg)",
+              }}
+            >
+              LUNCH
+            </span>
+          </div>
+          {/* Mon 14:00: Empty A2 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">A2</span>
+          </div>
+          {/* Mon 15:00: Database Mgmt. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Database Mgmt.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">F2</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 205</span>
+            </div>
+          </div>
 
-        {/* Slot Row 2: 09:00 - 09:50 */}
-        <div className="p-2 text-[9px] font-sans font-medium text-(--text-muted) bg-white/[0.02] rounded-xl text-center my-auto">
-          09:00
-        </div>
-        <div className="p-2 rounded-xl bg-blue-500/15 text-center">
-          <span className="font-bold text-blue-400 block text-[10px]">BCSE302L</span>
-          <span className="text-[8px] text-(--text-muted)">TT 214</span>
-        </div>
-        <div className="p-2 rounded-xl bg-blue-500/15 text-center">
-          <span className="font-bold text-blue-400 block text-[10px]">BCSE302L</span>
-          <span className="text-[8px] text-(--text-muted)">TT 214</span>
-        </div>
-        <div className="p-2 rounded-xl bg-blue-500/15 text-center">
-          <span className="font-bold text-blue-400 block text-[10px]">BCSE302L</span>
-          <span className="text-[8px] text-(--text-muted)">TT 214</span>
-        </div>
-        <div className="p-2 rounded-xl bg-white/[0.03] text-center">
-          <span className="font-bold text-(--text-muted) block text-[10px]">-</span>
-        </div>
-        <div className="p-2 rounded-xl bg-blue-500/15 text-center">
-          <span className="font-bold text-blue-400 block text-[10px]">BCSE302L</span>
-          <span className="text-[8px] text-(--text-muted)">TT 214</span>
-        </div>
+          {/* TUE Row */}
+          <div className="p-1.5 font-black text-(--accent) rounded-xl text-center text-[10px] flex items-center justify-center bg-(--accent)/10">
+            TUE
+          </div>
+          {/* Tue 08:00: Art. Intel. [NOW] */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-(--accent)/15 text-(--text-main)">
+            <div className="flex items-start justify-between gap-1 w-full">
+              <span className="font-bold text-[10px] leading-tight truncate">
+                Art. Intel.
+              </span>
+              <span className="px-1 py-0.2 rounded text-[7px] font-black uppercase bg-(--accent) text-(--on-accent) shrink-0">
+                NOW
+              </span>
+            </div>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-(--accent)/20 text-(--accent)">L</span>
+              <span className="text-[8px] font-medium text-(--accent) uppercase">B1</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--accent) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-80">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 401</span>
+            </div>
+          </div>
+          {/* Tue 09:00: Empty G1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">G1</span>
+          </div>
+          {/* Tue 10:00: Comp. Net. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Comp. Net.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">E1</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">TT 214</span>
+            </div>
+          </div>
+          {/* Tue 11:00: Empty TC1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">TC1</span>
+          </div>
+          {/* Tue 14:00: Empty B2 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">B2</span>
+          </div>
+          {/* Tue 15:00: Empty G2 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">G2</span>
+          </div>
 
-        {/* Slot Row 3: 10:00 - 10:50 */}
-        <div className="p-2 text-[9px] font-sans font-medium text-(--text-muted) bg-white/[0.02] rounded-xl text-center my-auto">
-          10:00
-        </div>
-        <div className="p-2 rounded-xl bg-emerald-500/15 text-center">
-          <span className="font-bold text-emerald-400 block text-[10px]">BCSE205L</span>
-          <span className="text-[8px] text-(--text-muted)">SJT 112</span>
-        </div>
-        <div className="p-2 rounded-xl bg-white/[0.03] text-center">
-          <span className="font-bold text-(--text-muted) block text-[10px]">-</span>
-        </div>
-        <div className="p-2 rounded-xl bg-emerald-500/15 text-center">
-          <span className="font-bold text-emerald-400 block text-[10px]">BCSE205L</span>
-          <span className="text-[8px] text-(--text-muted)">SJT 112</span>
-        </div>
-        <div className="p-2 rounded-xl bg-amber-500/15 text-center">
-          <span className="font-bold text-amber-400 block text-[10px]">BCSE204L</span>
-          <span className="text-[8px] text-(--text-muted)">SJT 205</span>
-        </div>
-        <div className="p-2 rounded-xl bg-white/[0.03] text-center">
-          <span className="font-bold text-(--text-muted) block text-[10px]">-</span>
+          {/* WED Row */}
+          <div className="p-1.5 font-black text-(--text-muted) rounded-xl text-center text-[10px] flex items-center justify-center bg-white/[0.02]">
+            WED
+          </div>
+          {/* Wed 08:00 - 10:00: Lab spanning 2 cols! */}
+          <div className="col-span-2 h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-purple-500/10">
+            <div className="flex items-start justify-between gap-1 w-full">
+              <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+                OS Lab
+              </span>
+              <span className="text-[8px] font-bold text-purple-400">
+                2 Hrs
+              </span>
+            </div>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-purple-500/20 text-purple-300">P</span>
+              <span className="text-[8px] font-medium text-purple-300 uppercase">L13-L14</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 112</span>
+            </div>
+          </div>
+          {/* Wed 10:00: Empty F1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">F1</span>
+          </div>
+          {/* Wed 11:00: Empty V1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">V1</span>
+          </div>
+          {/* Wed 14:00: Empty C2 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">C2</span>
+          </div>
+          {/* Wed 15:00: Soft. Engg. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Soft. Engg.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">A2</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 401</span>
+            </div>
+          </div>
+
+          {/* THU Row */}
+          <div className="p-1.5 font-black text-(--text-muted) rounded-xl text-center text-[10px] flex items-center justify-center bg-white/[0.02]">
+            THU
+          </div>
+          {/* Thu 08:00: Operating Sys. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Operating Sys.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">D1</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 112</span>
+            </div>
+          </div>
+          {/* Thu 09:00: Art. Intel. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Art. Intel.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">B1</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 401</span>
+            </div>
+          </div>
+          {/* Thu 10:00: Empty G1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">G1</span>
+          </div>
+          {/* Thu 11:00: Empty TE1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">TE1</span>
+          </div>
+          {/* Thu 14:00: Empty D2 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">D2</span>
+          </div>
+          {/* Thu 15:00: Empty B2 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">B2</span>
+          </div>
+
+          {/* FRI Row */}
+          <div className="p-1.5 font-black text-(--text-muted) rounded-xl text-center text-[10px] flex items-center justify-center bg-white/[0.02]">
+            FRI
+          </div>
+          {/* Fri 08:00: Comp. Net. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Comp. Net.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">E1</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">TT 214</span>
+            </div>
+          </div>
+          {/* Fri 09:00: Empty C1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">C1</span>
+          </div>
+          {/* Fri 10:00: Database Mgmt. */}
+          <div className="h-full min-h-[58px] p-2 rounded-xl flex flex-col justify-between text-left bg-white/[0.04]">
+            <span className="font-bold text-[10px] text-(--text-main) leading-tight truncate">
+              Database Mgmt.
+            </span>
+            <div className="flex items-center gap-1 my-0.5">
+              <span className="px-1 rounded text-[8px] font-bold bg-white/10 text-(--text-main)">L</span>
+              <span className="text-[8px] font-medium text-(--text-muted) uppercase">TA1</span>
+            </div>
+            <div className="flex items-center gap-1 text-[8px] text-(--text-muted) font-medium truncate">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 shrink-0 opacity-70">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="truncate">SJT 205</span>
+            </div>
+          </div>
+          {/* Fri 11:00: Empty TF1 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">TF1</span>
+          </div>
+          {/* Fri 14:00: Empty E2 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">E2</span>
+          </div>
+          {/* Fri 15:00: Empty C2 */}
+          <div className="h-full min-h-[58px] p-1.5 rounded-xl bg-white/[0.015] flex flex-col items-center justify-center">
+            <span className="text-[9px] font-semibold text-(--text-muted)/40 uppercase">C2</span>
+          </div>
         </div>
       </div>
     </div>
@@ -185,22 +440,26 @@ function MobileAttendanceCard() {
       {/* Course Breakdown */}
       <div className="flex flex-col gap-2">
         {[
-          { name: "Artificial Intelligence", pct: 96, attended: "24/25" },
-          { name: "Computer Networks", pct: 92, attended: "23/25" },
-          { name: "Operating Systems", pct: 90, attended: "18/20" },
-          { name: "Database Systems", pct: 88, attended: "22/25" },
+          { name: "Art. Intel.", pct: 96, attended: "24/25" },
+          { name: "Comp. Net.", pct: 92, attended: "23/25" },
+          { name: "Operating Sys.", pct: 90, attended: "18/20" },
+          { name: "Database Mgmt.", pct: 88, attended: "22/25" },
         ].map((c) => (
           <div
             key={c.name}
-            className="p-2.5 rounded-xl bg-(--bg-surface) flex items-center justify-between"
+            className="relative p-2.5 rounded-xl bg-(--bg-surface) flex items-center justify-between overflow-hidden"
           >
-            <div className="flex flex-col min-w-0 pr-2">
+            <div
+              className="absolute inset-y-0 left-0 bg-(--accent)/15 dark:bg-(--accent)/20 rounded-xl"
+              style={{ width: `${c.pct}%` }}
+            />
+            <div className="relative z-10 flex flex-col min-w-0 pr-2">
               <span className="text-xs font-bold text-(--text-main) truncate">
                 {c.name}
               </span>
               <span className="text-[10px] text-(--text-muted)">{c.attended} classes</span>
             </div>
-            <span className="text-[11px] font-black px-2 py-0.5 rounded-md bg-(--accent)/15 text-(--accent)">
+            <span className="relative z-10 text-[11px] font-black px-2 py-0.5 rounded-md bg-(--accent)/20 text-(--accent)">
               {c.pct}%
             </span>
           </div>
@@ -235,10 +494,10 @@ function MobileScheduleCard() {
           <span className="text-[11px] font-bold text-(--accent)">08:00 - 08:50 AM</span>
         </div>
         <span className="text-xs sm:text-sm font-bold text-(--text-main)">
-          Artificial Intelligence
+          Art. Intel.
         </span>
         <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
-          <span>BCSE301L • A1 Slot</span>
+          <span>BCSE302L • B1 Slot</span>
           <span className="font-bold text-(--text-main)">SJT 401</span>
         </div>
       </div>
@@ -250,10 +509,10 @@ function MobileScheduleCard() {
           <span className="text-[11px] font-bold text-(--text-muted)">09:00 - 09:50 AM</span>
         </div>
         <span className="text-xs sm:text-sm font-bold text-(--text-main)">
-          Computer Networks
+          Comp. Net.
         </span>
         <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
-          <span>BCSE302L • B1 Slot</span>
+          <span>BCSE303L • E1 Slot</span>
           <span className="font-semibold text-(--text-main)">TT 214</span>
         </div>
       </div>
@@ -285,19 +544,19 @@ function MobileCgpaCard() {
         {[
           {
             title: "Digital Assignment 1",
-            course: "BCSE302L",
+            course: "BCSE302L • Art. Intel.",
             due: "In 2 days",
             dueColor: "text-amber-400 bg-amber-500/10",
           },
           {
             title: "Project Review II",
-            course: "BCSE301L",
+            course: "BCSE301L • Soft. Engg.",
             due: "In 5 days",
             dueColor: "text-blue-400 bg-blue-500/10",
           },
           {
             title: "CAT-1 Assessment",
-            course: "BCSE205L",
+            course: "BCSE205L • Operating Sys.",
             due: "Oct 12",
             dueColor: "text-(--accent) bg-(--accent)/10",
           },
@@ -332,7 +591,7 @@ function DesktopMarksCard() {
         {[
           {
             code: "BCSE301L",
-            title: "Artificial Intelligence",
+            title: "Soft. Engg.",
             cat1: "47/50",
             cat2: "48/50",
             da: "30/30",
@@ -340,7 +599,7 @@ function DesktopMarksCard() {
           },
           {
             code: "BCSE302L",
-            title: "Computer Networks",
+            title: "Art. Intel.",
             cat1: "44/50",
             cat2: "46/50",
             da: "28/30",
@@ -348,7 +607,7 @@ function DesktopMarksCard() {
           },
           {
             code: "BCSE205L",
-            title: "Operating Systems",
+            title: "Operating Sys.",
             cat1: "42/50",
             cat2: "45/50",
             da: "29/30",
@@ -356,7 +615,7 @@ function DesktopMarksCard() {
           },
           {
             code: "BCSE204L",
-            title: "Database Systems",
+            title: "Database Mgmt.",
             cat1: "45/50",
             cat2: "47/50",
             da: "30/30",
