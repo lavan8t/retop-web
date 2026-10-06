@@ -40,15 +40,16 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
       {/* ── TOPBAR ── */}
       <div className="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-(--border-subtle) bg-(--bg-surface) shrink-0 gap-3">
         {/* Left: Logo */}
-        <div className="flex items-center gap-2 shrink-0">
-          <span
-            className="font-hero-base text-2xl font-black text-(--text-main) tracking-tighter lowercase leading-none"
+        <div className="flex items-center shrink-0">
+          <div
+            className="font-hero-base text-2xl font-black text-(--text-main) tracking-tighter lowercase leading-none flex items-center"
             style={{
               fontVariationSettings: '"wdth" 151, "wght" 900, "slnt" -10',
             }}
           >
-            re•
-          </span>
+            <span>re</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-(--text-main) ml-0.5 mt-2 shrink-0 inline-block" />
+          </div>
         </div>
 
         {/* Center: Search pill */}
