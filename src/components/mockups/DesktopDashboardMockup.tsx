@@ -77,11 +77,12 @@ export const DesktopDashboardMockup: React.FC<DesktopDashboardMockupProps> = ({
           >
             <Refresh style={{ width: 17, height: 17 }} />
           </div>
-          <div className="relative shrink-0 ml-1">
-            <div className="w-8 h-8 rounded-full bg-(--accent)/20 border border-(--accent)/35 flex items-center justify-center text-(--accent) font-bold text-xs shadow-xs">
-              L
+          <div className="shrink-0 ml-1">
+            <div className="w-8 h-8 rounded-full bg-(--accent)/20 border border-(--accent)/35 flex items-center justify-center text-(--accent) shadow-xs">
+              <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+                <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3.3 0-8 1.7-8 5v1h16v-1c0-3.3-4.7-5-8-5Z" />
+              </svg>
             </div>
-            <span className="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-(--bg-surface)" />
           </div>
         </div>
       </div>
