@@ -141,7 +141,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                   Digital Assignment 1
                 </span>
                 <span className="text-[10px] font-medium text-(--text-muted)">
-                  CSE3002
+                  BCSE302L
                 </span>
               </div>
               <span className="shrink-0 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/15 text-rose-300 dark:text-rose-200">
@@ -156,7 +156,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                   Project Review II
                 </span>
                 <span className="text-[10px] font-medium text-(--text-muted)">
-                  CSE3001
+                  BCSE301L
                 </span>
               </div>
               <span className="shrink-0 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-(--accent)/15 text-(--accent)">
@@ -278,7 +278,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                     </span>
 
                     <div className="flex items-center gap-2 text-[11px] text-purple-300">
-                      <span className="font-bold">CSE3001</span>
+                      <span className="font-bold">BCSE301L</span>
                       <span>•</span>
                       <span>02:00 PM</span>
                       <span>•</span>
@@ -295,7 +295,7 @@ export const MobileDashboardMockup: React.FC<MobileDashboardMockupProps> = ({
                         Web Mining
                       </span>
                       <span className="text-[10px] font-medium text-(--text-muted)">
-                        CSE4015
+                        BCSE415L
                       </span>
                     </div>
                     <span className="shrink-0 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/15 text-amber-300 dark:text-amber-200">

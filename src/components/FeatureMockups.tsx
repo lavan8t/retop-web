@@ -94,18 +94,18 @@ function DesktopTimetableCard() {
           08:00
         </div>
         <div className="p-2 rounded-xl bg-(--accent)/15 text-center">
-          <span className="font-bold text-(--accent) block text-[10px]">CSE3001</span>
+          <span className="font-bold text-(--accent) block text-[10px]">BCSE301L</span>
           <span className="text-[8px] text-(--text-muted)">SJT 401</span>
         </div>
         <div className="p-2 rounded-xl bg-(--accent)/25 text-center">
-          <span className="font-bold text-(--accent) block text-[10px]">CSE3001 [NOW]</span>
+          <span className="font-bold text-(--accent) block text-[10px]">BCSE301L [NOW]</span>
           <span className="text-[8px] text-(--text-muted)">SJT 401</span>
         </div>
         <div className="p-2 rounded-xl bg-white/[0.03] text-center">
           <span className="font-bold text-(--text-muted) block text-[10px]">-</span>
         </div>
         <div className="p-2 rounded-xl bg-(--accent)/15 text-center">
-          <span className="font-bold text-(--accent) block text-[10px]">CSE3001</span>
+          <span className="font-bold text-(--accent) block text-[10px]">BCSE301L</span>
           <span className="text-[8px] text-(--text-muted)">SJT 401</span>
         </div>
         <div className="p-2 rounded-xl bg-white/[0.03] text-center">
@@ -117,22 +117,22 @@ function DesktopTimetableCard() {
           09:00
         </div>
         <div className="p-2 rounded-xl bg-blue-500/15 text-center">
-          <span className="font-bold text-blue-400 block text-[10px]">CSE3002</span>
+          <span className="font-bold text-blue-400 block text-[10px]">BCSE302L</span>
           <span className="text-[8px] text-(--text-muted)">TT 214</span>
         </div>
         <div className="p-2 rounded-xl bg-blue-500/15 text-center">
-          <span className="font-bold text-blue-400 block text-[10px]">CSE3002</span>
+          <span className="font-bold text-blue-400 block text-[10px]">BCSE302L</span>
           <span className="text-[8px] text-(--text-muted)">TT 214</span>
         </div>
         <div className="p-2 rounded-xl bg-blue-500/15 text-center">
-          <span className="font-bold text-blue-400 block text-[10px]">CSE3002</span>
+          <span className="font-bold text-blue-400 block text-[10px]">BCSE302L</span>
           <span className="text-[8px] text-(--text-muted)">TT 214</span>
         </div>
         <div className="p-2 rounded-xl bg-white/[0.03] text-center">
           <span className="font-bold text-(--text-muted) block text-[10px]">-</span>
         </div>
         <div className="p-2 rounded-xl bg-blue-500/15 text-center">
-          <span className="font-bold text-blue-400 block text-[10px]">CSE3002</span>
+          <span className="font-bold text-blue-400 block text-[10px]">BCSE302L</span>
           <span className="text-[8px] text-(--text-muted)">TT 214</span>
         </div>
 
@@ -141,18 +141,18 @@ function DesktopTimetableCard() {
           10:00
         </div>
         <div className="p-2 rounded-xl bg-emerald-500/15 text-center">
-          <span className="font-bold text-emerald-400 block text-[10px]">CSE2005</span>
+          <span className="font-bold text-emerald-400 block text-[10px]">BCSE205L</span>
           <span className="text-[8px] text-(--text-muted)">SJT 112</span>
         </div>
         <div className="p-2 rounded-xl bg-white/[0.03] text-center">
           <span className="font-bold text-(--text-muted) block text-[10px]">-</span>
         </div>
         <div className="p-2 rounded-xl bg-emerald-500/15 text-center">
-          <span className="font-bold text-emerald-400 block text-[10px]">CSE2005</span>
+          <span className="font-bold text-emerald-400 block text-[10px]">BCSE205L</span>
           <span className="text-[8px] text-(--text-muted)">SJT 112</span>
         </div>
         <div className="p-2 rounded-xl bg-amber-500/15 text-center">
-          <span className="font-bold text-amber-400 block text-[10px]">CSE2004</span>
+          <span className="font-bold text-amber-400 block text-[10px]">BCSE204L</span>
           <span className="text-[8px] text-(--text-muted)">SJT 205</span>
         </div>
         <div className="p-2 rounded-xl bg-white/[0.03] text-center">
@@ -238,7 +238,7 @@ function MobileScheduleCard() {
           Artificial Intelligence
         </span>
         <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
-          <span>CSE3001 • A1 Slot</span>
+          <span>BCSE301L • A1 Slot</span>
           <span className="font-bold text-(--text-main)">SJT 401</span>
         </div>
       </div>
@@ -253,7 +253,7 @@ function MobileScheduleCard() {
           Computer Networks
         </span>
         <div className="flex items-center justify-between text-[11px] text-(--text-muted)">
-          <span>CSE3002 • B1 Slot</span>
+          <span>BCSE302L • B1 Slot</span>
           <span className="font-semibold text-(--text-main)">TT 214</span>
         </div>
       </div>
@@ -285,19 +285,19 @@ function MobileCgpaCard() {
         {[
           {
             title: "Digital Assignment 1",
-            course: "CSE3002",
+            course: "BCSE302L",
             due: "In 2 days",
             dueColor: "text-amber-400 bg-amber-500/10",
           },
           {
             title: "Project Review II",
-            course: "CSE3001",
+            course: "BCSE301L",
             due: "In 5 days",
             dueColor: "text-blue-400 bg-blue-500/10",
           },
           {
             title: "CAT-1 Assessment",
-            course: "CSE2005",
+            course: "BCSE205L",
             due: "Oct 12",
             dueColor: "text-(--accent) bg-(--accent)/10",
           },
@@ -331,7 +331,7 @@ function DesktopMarksCard() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
         {[
           {
-            code: "CSE3001",
+            code: "BCSE301L",
             title: "Artificial Intelligence",
             cat1: "47/50",
             cat2: "48/50",
@@ -339,7 +339,7 @@ function DesktopMarksCard() {
             grade: "S",
           },
           {
-            code: "CSE3002",
+            code: "BCSE302L",
             title: "Computer Networks",
             cat1: "44/50",
             cat2: "46/50",
@@ -347,7 +347,7 @@ function DesktopMarksCard() {
             grade: "S",
           },
           {
-            code: "CSE2005",
+            code: "BCSE205L",
             title: "Operating Systems",
             cat1: "42/50",
             cat2: "45/50",
@@ -355,7 +355,7 @@ function DesktopMarksCard() {
             grade: "A",
           },
           {
-            code: "CSE2004",
+            code: "BCSE204L",
             title: "Database Systems",
             cat1: "45/50",
             cat2: "47/50",
