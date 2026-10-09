@@ -59,6 +59,7 @@ function AuthenticDigitalIDCard() {
       <div
         className="w-full bg-[#181d79] text-white font-bold text-center h-[38px] sm:h-[42px] flex items-center justify-center rounded-b-xl text-lg sm:text-[21px] uppercase r shrink-0 font-id-helvetica"
         style={{ fontFamily: "'Helvetica', 'Arial', sans-serif" }}
+        title="Hosteller • Q Block, Room 714 • 4 Bed AC • Special Mess"
       >
         HOSTELLER
       </div>

@@ -87,6 +87,16 @@ export const featuresCopy = {
       name: "John Doe",
       regNo: "21BCE0001",
       badge: "HOSTELLER",
+      block: "Q Block",
+      room: "Room 714",
+      bedType: "4 Bed AC",
+      mess: "Special Mess",
+    },
+    hostel: {
+      block: "Q Block",
+      room: "Room 714",
+      bedType: "4 Bed AC",
+      mess: "Special Mess",
     },
     marks: {
       title: "Marks breakdown",
